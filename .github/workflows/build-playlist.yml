@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -24,10 +26,11 @@ jobs:
         run: node scripts/build-m3u.js
       
       - name: Commit and push if changed
-        # Use GITHUB_TOKEN for auth (it has repo scope by default)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "juzkev"
+          git config user.email "juzkev@gmail.com"
           git add playlist.m3u
           git diff --cached --quiet || git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S')"
-          git push
+          git push https://x-access-token:$GH_PAT@github.com/juzkev/anbox-iptv.git main
