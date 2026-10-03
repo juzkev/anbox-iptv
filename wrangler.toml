@@ -1,15 +1,13 @@
 name = "anbox-iptv"
 main = "src/anbox-iptv-worker.js"
 compatibility_date = "2024-01-01"
-
-# KV Namespaces for Cloudflare Workers
-# Create these with: wrangler kv:namespace create <name>
-# Then update the IDs below
+compatibility_flags = ["nodejs_compat"]
+account_id = "853507b56b9537fc68fe461e6ce36ed9"
 
 [[kv_namespaces]]
 binding = "playlists"
-id = "YOUR_PLAYLISTS_NAMESPACE_ID"
+id = "f734aec3a692476cad6c0b7eb03648cf"
 
 [[kv_namespaces]]
 binding = "portalist"
-id = "YOUR_PORTALIST_NAMESPACE_ID"
+id = "5f1bf8a016184ba099055578c063789b"
