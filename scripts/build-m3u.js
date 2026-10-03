@@ -133,7 +133,9 @@ async function buildM3U() {
   let m3u = '#EXTM3U\n';
   m3u += `#Generated: ${new Date().toISOString()}\n`;
   m3u += `#Active Sources: ${workingPortals.map(p => p.name.toUpperCase()).join(' & ')}\n\n`;
-  
+
+  const seenUrls = new Set();
+
   for (const portal of workingPortals) {
     console.log(`📥 Fetching channels from ${portal.name}...`);
     const channels = await fetchChannelList(portal.name, portal.url);
@@ -155,6 +157,11 @@ async function buildM3U() {
       }
       
       const realUrl = `${portalBase}/play/live.php?mac=${mac}&stream=${ch.id}&extension=ts&play_token=${token}`;
+      
+      // Deduplicate by exact stream URL
+      if (seenUrls.has(realUrl)) continue;
+      seenUrls.add(realUrl);
+      
       const b64Url = Buffer.from(realUrl).toString('base64');
       const streamUrl = `${customDomain}/resolve?src=${b64Url}`;
       
@@ -175,6 +182,8 @@ async function buildM3U() {
       m3u += `${streamUrl}\n`;
     }
   }
+  
+  console.log(`🔄 Deduplicated: ${seenUrls.size} unique stream URLs`);
   
   return m3u;
 }
