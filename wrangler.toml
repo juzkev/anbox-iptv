@@ -1,0 +1,15 @@
+name = "anbox-iptv"
+main = "src/miniflare-final.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespaces for Cloudflare Workers
+# Create these with: wrangler kv:namespace create <name>
+# Then update the IDs below
+
+[[kv_namespaces]]
+binding = "playlists"
+id = "YOUR_PLAYLISTS_NAMESPACE_ID"
+
+[[kv_namespaces]]
+binding = "portalist"
+id = "YOUR_PORTALIST_NAMESPACE_ID"
