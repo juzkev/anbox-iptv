@@ -4,3 +4,4 @@ node_modules/
 .mf3/
 .wrangler/
 *.log
+*.clean.js
