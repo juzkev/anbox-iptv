@@ -2,7 +2,7 @@
 // and passes the cleaned code to miniflare.
 // Usage: node scripts/miniflare-wrapper.js [--port 8787]
 
-const { spawnSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -39,11 +39,9 @@ for (let i = 0; i < args.length; i++) {
 
 console.log(`📺 Starting miniflare on port ${port}...`);
 
-// Run miniflare with explicit cwd
-const result = spawnSync(
+// Run miniflare with execFileSync (no shell, passes args correctly)
+execFileSync(
   process.execPath,
   [MINIFLARE_BIN, CLEAN_SCRIPT, '--port', port],
   { cwd: ROOT, stdio: 'inherit' }
 );
-
-process.exit(result.status || 0);
