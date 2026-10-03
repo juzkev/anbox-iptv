@@ -202,7 +202,7 @@ async function buildM3U() {
     // Keep the first channel as main
     const mainCh = list[0];
     const b64Url = Buffer.from(mainCh.url).toString('base64');
-    const streamUrl = `${customDomain}/resolve?src=${b64Url}`;
+    const streamUrl = `${customDomain}/resolve?src=${encodeURIComponent(b64Url)}`;
 
     m3u += `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${mainCh.name} [${mainCh.portal.toUpperCase()}]" group-title="${mainCh.groupTitle}",${mainCh.name} [${mainCh.portal.toUpperCase()}]\n`;
     m3u += `${streamUrl}\n`;
@@ -213,7 +213,7 @@ async function buildM3U() {
       for (let i = 1; i < list.length; i++) {
         const altCh = list[i];
         const altB64Url = Buffer.from(altCh.url).toString('base64');
-        const altStreamUrl = `${customDomain}/resolve?src=${altB64Url}`;
+        const altStreamUrl = `${customDomain}/resolve?src=${encodeURIComponent(altB64Url)}`;
         
         m3u += `#EXTINF:-1 tvg-id="${altCh.id}" tvg-name="${altCh.name} [${altCh.portal.toUpperCase()}]" group-title="${altCh.groupTitle}",${altCh.name} [${altCh.portal.toUpperCase()}]\n`;
         m3u += `${altStreamUrl}\n`;
