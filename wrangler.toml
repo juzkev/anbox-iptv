@@ -1,5 +1,5 @@
 name = "anbox-iptv"
-main = "src/miniflare-final.js"
+main = "src/anbox-iptv-worker.js"
 compatibility_date = "2024-01-01"
 
 # KV Namespaces for Cloudflare Workers

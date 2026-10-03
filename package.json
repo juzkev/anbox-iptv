@@ -2,10 +2,10 @@
   "name": "anbox-iptv",
   "version": "1.0.0",
   "description": "Anbox IPTV Worker for Cloudflare - Aggregates multiple IPTV portals into a unified M3U playlist",
-  "main": "src/miniflare-final.js",
+  "main": "src/anbox-iptv-worker.js",
   "scripts": {
-    "dev": "miniflare src/miniflare-final.js",
-    "start": "miniflare src/miniflare-final.js",
+    "dev": "node scripts/miniflare-wrapper.js",
+    "start": "node scripts/miniflare-wrapper.js",
     "probe": "node scripts/probe-channels.js",
     "test": "node scripts/test-anbox-worker.js",
     "local-server": "node scripts/server.js"
