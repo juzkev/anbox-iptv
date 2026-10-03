@@ -2,7 +2,7 @@
 // and passes the cleaned code to miniflare.
 // Usage: node scripts/miniflare-wrapper.js [--port 8787]
 
-const { execFileSync } = require('child_process');
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -10,11 +10,9 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const MAIN_SCRIPT = path.join(ROOT, 'src', 'anbox-iptv-worker.js');
 const CLEAN_SCRIPT = path.join(ROOT, 'src', 'anbox-iptv-worker-clean.js');
-const MINIFLARE_BIN = path.join(ROOT, 'node_modules', '.bin', 'miniflare');
 
 console.log(`Root: ${ROOT}`);
 console.log(`Main exists: ${fs.existsSync(MAIN_SCRIPT)}`);
-console.log(`Miniflare exists: ${fs.existsSync(MINIFLARE_BIN)}`);
 
 // Strip the mock block (lines 123–200)
 let code = fs.readFileSync(MAIN_SCRIPT, 'utf8');
@@ -39,9 +37,6 @@ for (let i = 0; i < args.length; i++) {
 
 console.log(`📺 Starting miniflare on port ${port}...`);
 
-// Run miniflare with execFileSync (no shell, passes args correctly)
-execFileSync(
-  process.execPath,
-  [MINIFLARE_BIN, CLEAN_SCRIPT, '--port', port],
-  { cwd: ROOT, stdio: 'inherit' }
-);
+// Run miniflare directly in the project root
+const cmd = `node node_modules/.bin/miniflare "${CLEAN_SCRIPT}" --port ${port}`;
+execSync(cmd, { cwd: ROOT, stdio: 'inherit', shell: true });
