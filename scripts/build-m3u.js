@@ -37,7 +37,7 @@ const DEFAULT_MARKERS = [
   "GENERAL", "ENTERTAINMENT", "NEWS", "MOVIES", "DOCUMENTARY", "SPORTS"
 ];
 
-const customDomain = "https://virtual.anbox.dpdns.org";
+const customDomain = "https://anbox-iptv.kkhk.workers.dev";
 
 function fetchUrl(url, options = {}) {
   return new Promise((resolve, reject) => {
