@@ -112,6 +112,15 @@ async function fetchChannelList(portalKey, url) {
   }
 }
 
+// Normalize channel name to group alternative streams together
+function normalizeChannelName(name) {
+  return name
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g, '') // remove special characters
+    .replace(/(HEVC|FHD|HD|SD|UHD|4K|1080P|720P|BACKUP|ALT|DIRECT|RAW)/g, '') // strip quality tags
+    .trim();
+}
+
 async function buildM3U() {
   console.log('🔍 Probing portals...');
   
@@ -130,11 +139,7 @@ async function buildM3U() {
   console.log(`✅ Found ${workingPortals.length}/${Object.keys(PROBE_URLS).length} working portals`);
   console.log('Working:', workingPortals.map(p => p.name).join(', '));
   
-  let m3u = '#EXTM3U\n';
-  m3u += `#Generated: ${new Date().toISOString()}\n`;
-  m3u += `#Active Sources: ${workingPortals.map(p => p.name.toUpperCase()).join(' & ')}\n\n`;
-
-  const seenUrls = new Set();
+  const channelMap = new Map(); // key: normalized name, value: array of channel objects
 
   for (const portal of workingPortals) {
     console.log(`📥 Fetching channels from ${portal.name}...`);
@@ -158,13 +163,6 @@ async function buildM3U() {
       
       const realUrl = `${portalBase}/play/live.php?mac=${mac}&stream=${ch.id}&extension=ts&play_token=${token}`;
       
-      // Deduplicate by exact stream URL
-      if (seenUrls.has(realUrl)) continue;
-      seenUrls.add(realUrl);
-      
-      const b64Url = Buffer.from(realUrl).toString('base64');
-      const streamUrl = `${customDomain}/resolve?src=${b64Url}`;
-      
       let groupTitle = '';
       let shouldInclude = false;
       
@@ -177,13 +175,54 @@ async function buildM3U() {
       }
       
       if (!shouldInclude) continue;
-      
-      m3u += `#EXTINF:-1 tvg-id="${ch.id}" tvg-name="${name}" group-title="${groupTitle}",${name}\n`;
-      m3u += `${streamUrl}\n`;
+
+      const normName = normalizeChannelName(name);
+      if (!channelMap.has(normName)) {
+        channelMap.set(normName, []);
+      }
+      channelMap.get(normName).push({
+        id: ch.id,
+        name: name,
+        groupTitle: groupTitle,
+        url: realUrl,
+        portal: portal.name
+      });
+    }
+  }
+
+  // Generate M3U playlist with grouped/deduplicated channels
+  let m3u = '#EXTM3U\n';
+  m3u += `#Generated: ${new Date().toISOString()}\n`;
+  m3u += `#Active Sources: ${workingPortals.map(p => p.name.toUpperCase()).join(' & ')}\n\n`;
+
+  let totalChannels = 0;
+  let alternateStreams = 0;
+
+  for (const [normName, list] of channelMap.entries()) {
+    // Keep the first channel as main
+    const mainCh = list[0];
+    const b64Url = Buffer.from(mainCh.url).toString('base64');
+    const streamUrl = `${customDomain}/resolve?src=${b64Url}`;
+
+    m3u += `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${mainCh.name} [${mainCh.portal.toUpperCase()}]" group-title="${mainCh.groupTitle}",${mainCh.name} [${mainCh.portal.toUpperCase()}]\n`;
+    m3u += `${streamUrl}\n`;
+    totalChannels++;
+
+    // Add alternate streams if available (M3U supports fallback URLs using alt_url or comments)
+    if (list.length > 1) {
+      for (let i = 1; i < list.length; i++) {
+        const altCh = list[i];
+        const altB64Url = Buffer.from(altCh.url).toString('base64');
+        const altStreamUrl = `${customDomain}/resolve?src=${altB64Url}`;
+        
+        m3u += `#EXTINF:-1 tvg-id="${altCh.id}" tvg-name="${altCh.name} [${altCh.portal.toUpperCase()}]" group-title="${altCh.groupTitle}",${altCh.name} [${altCh.portal.toUpperCase()}]\n`;
+        m3u += `${altStreamUrl}\n`;
+        alternateStreams++;
+      }
     }
   }
   
-  console.log(`🔄 Deduplicated: ${seenUrls.size} unique stream URLs`);
+  console.log(`📊 Total channels: ${totalChannels} (plus ${alternateStreams} alternative streams)`);
   
   return m3u;
 }
@@ -195,10 +234,6 @@ async function main() {
     fs.writeFileSync(outputPath, m3u);
     console.log(`✅ Playlist written to ${outputPath}`);
     console.log(`📊 Total size: ${(m3u.length / 1024).toFixed(2)} KB`);
-    
-    // Count channels
-    const channelCount = (m3u.match(/#EXTINF/g) || []).length;
-    console.log(`📺 Total channels: ${channelCount}`);
     
   } catch (error) {
     console.error('❌ Error:', error);
