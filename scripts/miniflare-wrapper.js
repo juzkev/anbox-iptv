@@ -6,8 +6,15 @@ const { spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const MAIN_SCRIPT = path.join(__dirname, '..', 'src', 'anbox-iptv-worker.js');
-const CLEAN_SCRIPT = path.join(__dirname, '..', 'src', 'anbox-iptv-worker-clean.js');
+// Always resolve relative to this file's location, not process cwd
+const ROOT = path.resolve(__dirname, '..');
+const MAIN_SCRIPT = path.join(ROOT, 'src', 'anbox-iptv-worker.js');
+const CLEAN_SCRIPT = path.join(ROOT, 'src', 'anbox-iptv-worker-clean.js');
+const MINIFLARE_BIN = path.join(ROOT, 'node_modules', '.bin', 'miniflare');
+
+console.log(`Root: ${ROOT}`);
+console.log(`Main exists: ${fs.existsSync(MAIN_SCRIPT)}`);
+console.log(`Miniflare exists: ${fs.existsSync(MINIFLARE_BIN)}`);
 
 // Strip the mock block (lines 123–200)
 let code = fs.readFileSync(MAIN_SCRIPT, 'utf8');
@@ -24,7 +31,7 @@ const args = process.argv.slice(2);
 for (let i = 0; i < args.length; i++) {
   if (args[i] === '--port' && args[i + 1]) {
     port = args[i + 1];
-    i++; // skip next arg
+    i++;
   } else if (args[i].startsWith('--port=')) {
     port = args[i].split('=')[1];
   }
@@ -32,15 +39,11 @@ for (let i = 0; i < args.length; i++) {
 
 console.log(`📺 Starting miniflare on port ${port}...`);
 
-// Run miniflare
+// Run miniflare with explicit cwd
 const result = spawnSync(
   process.execPath,
-  [
-    path.join(__dirname, '..', 'node_modules', '.bin', 'miniflare'),
-    CLEAN_SCRIPT,
-    '--port', port
-  ],
-  { cwd: path.join(__dirname, '..'), stdio: 'inherit' }
+  [MINIFLARE_BIN, CLEAN_SCRIPT, '--port', port],
+  { cwd: ROOT, stdio: 'inherit' }
 );
 
 process.exit(result.status || 0);
