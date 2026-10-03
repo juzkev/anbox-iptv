@@ -24,7 +24,6 @@ jobs:
         run: node scripts/build-m3u.js
       
       - name: Commit and push if changed
-        # Use GITHUB_TOKEN for read, but we need PAT for push (write)
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
@@ -32,4 +31,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add playlist.m3u
           git diff --cached --quiet || git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S')"
-          git push https://x-access-token:${GH_PAT}@github.com/juzkev/anbox-iptv.git main || true
+          # Push using PAT
+          git push https://x-access-token:$GH_PAT@github.com/juzkev/anbox-iptv.git main
