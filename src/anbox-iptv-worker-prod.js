@@ -273,10 +273,12 @@ async function handleRequest(request, event) {
     const src = url.searchParams.get("src");
     if (!src) return new Response("No source", { status: 400 });
     if (isBrowserOrIdm && !isTargetPlayer) return new Response("Unauthorized playback entity detected.", { status: 403 });
-    try { 
-      return Response.redirect(Buffer.from(src, 'base64').toString('utf8'), 302); 
-    } catch { 
-      return new Response("Invalid source", { status: 400 }); 
+    try {
+      // Use atob() instead of Buffer.from() for Workers compatibility
+      const decoded = atob(src);
+      return Response.redirect(decoded, 302);
+    } catch {
+      return new Response("Invalid source", { status: 400 });
     }
   }
   return new Response("Worker is active.", { status: 200 });
