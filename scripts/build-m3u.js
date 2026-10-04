@@ -820,13 +820,12 @@ async function buildM3U() {
   }
 
   
+
 /**
  * Build anime-only playlist from main M3U
- * - Only includes channels with ANIMAX in name
- * - Skips "Anime X HIDIVE" and "EN| ANIME TV"
- * - Extracts fresh tokens from portal URLs via worker base64 decode
+ * - Only includes ANIMAX and ONEPLAY ANIME channels
+ * - Skips Anime X HIDIVE
  * - Converts to direct portal URLs with godofiptv as first fallback
- * - Adds PH|ANIMAX (godofiptv) as fallback for Animax HD
  */
 function buildAnimePlaylist(m3u) {
   const portalMap = {};
@@ -872,14 +871,9 @@ function buildAnimePlaylist(m3u) {
         continue;
       }
 
-      let cleanName = name.replace(/\[.*?\]/g, '').trim();
-      cleanName = cleanName.replace(/\s+/g, ' ');
-
-      // Fix corrupted names from portal format
-      if (cleanName.includes(']') || cleanName.includes('group-title')) {
-        const match = cleanName.match(/(EN\| ONEPLAY ANIME.*?ᴰᵍ)/);
-        if (match) cleanName = match[1];
-      }
+      // Extract clean name - take part after last comma
+      let cleanName = name.split(',').pop().trim();
+      cleanName = cleanName.replace(/[.*?]/g, '').trim();
 
       if (url.includes('tv123.cc.cd')) {
         if (cleanName === 'Animax HD') {
@@ -906,7 +900,7 @@ function buildAnimePlaylist(m3u) {
             
             result.push(`#EXTINF:-1 tvg-name="${cleanName}",${cleanName}`);
 
-            // Order URLs: godofiptv first, then others
+            // Build URLs and sort: godofiptv first
             const urls = [];
             for (const pName of portalNames) {
               const p = portalMap[pName];
@@ -915,7 +909,6 @@ function buildAnimePlaylist(m3u) {
               }
             }
             
-            // Sort: godofiptv first
             urls.sort((a, b) => {
               if (a.includes('godofiptv') && !b.includes('godofiptv')) return -1;
               if (!a.includes('godofiptv') && b.includes('godofiptv')) return 1;
