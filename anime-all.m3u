@@ -1,5 +1,5 @@
 #EXTM3U
-#Generated: 2026-10-04T07:50:07.439Z
+#Generated: 2026-10-04T07:50:21.817Z
 #Anime Channels (Expanded - One URL Per Portal)
 
 #EXTINF:-1 tvg-id="stream-fe278051-83fd-43bd-ad36-f8e2b90422aa" tvg-name="Anime 24/7 (ROKU)" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/OM659334/3760597490189526-7_SC_logo_color.jpg" group-title="日本 | Japan",Anime 24/7 (ROKU)
@@ -14,167 +14,95 @@ http://tv123.cc.cd/live.php?ch=901&sid=39daee60950dbd7afe4ddef23c914881&exp=1791
 http://tv123.cc.cd/live.php?ch=910&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=8e93158fe3b80b3d0243499d5964c37fed83cea9326bbadb24193d4ab49a8909
 #EXTINF:-1 tvg-id="stream-ef7730c1-8a6d-4c7b-82b8-b90a0d5483e5" tvg-name="TCL Anime (TCL+)" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU572810/14490431765440765-TCL_Anime_SC_logo_color.png" group-title="日本 | Japan",TCL Anime (TCL+)
 http://tv123.cc.cd/live.php?ch=927&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=30fd8835adf51eb3d11ac4b2113e77c5bb18c6fbb1b1461a720e653f29c0abfd
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro]
-sbhgoldpro.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro3]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro3]
-sbhgoldpro3.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro5]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro5]
-sbhgoldpro5.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro6]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro6]
-sbhgoldpro6.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro7]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [sbhgoldpro7]
-sbhgoldpro7.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [debit]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [debit]
-debit.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dinofox]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dinofox]
-dinofox.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dinomultiservice]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dinomultiservice]
-dinomultiservice.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dino3]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dino3]
-dino3.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dino4]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dino4]
-dino4.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dino5]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [dino5]
-dino5.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [skunky1]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [skunky1]
-skunky1.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [cwdn2]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [cwdn2]
-cwdn2.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [mlnldino3]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [mlnldino3]
-mlnldino3.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [iptvgoat]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [godofiptv]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 1 FHD [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro]
-sbhgoldpro.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro3]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro3]
-sbhgoldpro3.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro5]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro5]
-sbhgoldpro5.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro6]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro6]
-sbhgoldpro6.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro7]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [sbhgoldpro7]
-sbhgoldpro7.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [debit]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [debit]
-debit.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dinofox]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dinofox]
-dinofox.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dinomultiservice]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dinomultiservice]
-dinomultiservice.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dino3]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dino3]
-dino3.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dino4]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dino4]
-dino4.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dino5]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [dino5]
-dino5.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [skunky1]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [skunky1]
-skunky1.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [cwdn2]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [cwdn2]
-cwdn2.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [mlnldino3]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [mlnldino3]
-mlnldino3.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [iptvgoat]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [godofiptv]",sbhgoldpro3, sbhgoldpro5, sbhgoldpro6, sbhgoldpro7, debit, dinofox, dinomultiservice, dino3, dino4, dino5, skunky1, cwdn2, mlnldino3, iptvgoat, godofiptv]" group-title="Sports",FR - BEIN ANIME 2 FHD [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
 #EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [greatott]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [greatott]
-greatott.in/play/live.php?mac=undefined&stream=1569746&extension=ts&play_token=47AxP4x3mM
+http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1569746&extension=ts&play_token=47AxP4x3mM
 #EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [trxx]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1569746&extension=ts&play_token=47AxP4x3mM
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1569746&extension=ts&play_token=47AxP4x3mM
 #EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [iptvgoat]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1569746&extension=ts&play_token=47AxP4x3mM
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1569746&extension=ts&play_token=47AxP4x3mM
 #EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [godofiptv]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1569746&extension=ts&play_token=47AxP4x3mM
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1569746&extension=m3u8&play_token=47AxP4x3mM
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",PRIME| ANIME X HIDIVE ᴿᴬᵂ [trxx]",iptvgoat, godofiptv]" group-title="Sports",PRIME| ANIME X HIDIVE ᴿᴬᵂ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1920453&extension=ts&play_token=M0BKlHvpIw��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920453&extension=ts&play_token=M0BKlHvpIw��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",PRIME| ANIME X HIDIVE ᴿᴬᵂ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",PRIME| ANIME X HIDIVE ᴿᴬᵂ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1920453&extension=ts&play_token=M0BKlHvpIw��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920453&extension=ts&play_token=M0BKlHvpIw��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",PRIME| ANIME X HIDIVE ᴿᴬᵂ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",PRIME| ANIME X HIDIVE ᴿᴬᵂ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1920453&extension=ts&play_token=M0BKlHvpIw��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920453&extension=m3u8&play_token=M0BKlHvpIw��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916793&extension=ts&play_token=fJBUKJphPF��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916793&extension=ts&play_token=fJBUKJphPF��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916793&extension=ts&play_token=fJBUKJphPF��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916793&extension=ts&play_token=fJBUKJphPF��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916793&extension=ts&play_token=fJBUKJphPF��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916793&extension=m3u8&play_token=fJBUKJphPF��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916792&extension=ts&play_token=3VAlTtxgUQ��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916792&extension=ts&play_token=3VAlTtxgUQ��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916792&extension=ts&play_token=3VAlTtxgUQ��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916792&extension=ts&play_token=3VAlTtxgUQ��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916792&extension=ts&play_token=3VAlTtxgUQ��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916792&extension=m3u8&play_token=3VAlTtxgUQ��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916791&extension=ts&play_token=6HYsSJJ4Uh��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916791&extension=ts&play_token=6HYsSJJ4Uh��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916791&extension=ts&play_token=6HYsSJJ4Uh��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916791&extension=ts&play_token=6HYsSJJ4Uh��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916791&extension=ts&play_token=6HYsSJJ4Uh��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916791&extension=m3u8&play_token=6HYsSJJ4Uh��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916790&extension=ts&play_token=uYQ3JDd48a��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916790&extension=ts&play_token=uYQ3JDd48a��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916790&extension=ts&play_token=uYQ3JDd48a��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916790&extension=ts&play_token=uYQ3JDd48a��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916790&extension=ts&play_token=uYQ3JDd48a��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916790&extension=m3u8&play_token=uYQ3JDd48a��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916789&extension=ts&play_token=h6Vwooybdd��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916789&extension=ts&play_token=h6Vwooybdd��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916789&extension=ts&play_token=h6Vwooybdd��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916789&extension=ts&play_token=h6Vwooybdd��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916789&extension=ts&play_token=h6Vwooybdd��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916789&extension=m3u8&play_token=h6Vwooybdd��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916788&extension=ts&play_token=ZNAadmAgx0��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916788&extension=ts&play_token=ZNAadmAgx0��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916788&extension=ts&play_token=ZNAadmAgx0��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916788&extension=ts&play_token=ZNAadmAgx0��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916788&extension=ts&play_token=ZNAadmAgx0��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916788&extension=m3u8&play_token=ZNAadmAgx0��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916787&extension=ts&play_token=g3pdH65xCb��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916787&extension=ts&play_token=g3pdH65xCb��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916787&extension=ts&play_token=g3pdH65xCb��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916787&extension=ts&play_token=g3pdH65xCb��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916787&extension=ts&play_token=g3pdH65xCb��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916787&extension=m3u8&play_token=g3pdH65xCb��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916786&extension=ts&play_token=IzKJSqhkll��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916786&extension=ts&play_token=IzKJSqhkll��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916786&extension=ts&play_token=IzKJSqhkll��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916786&extension=ts&play_token=IzKJSqhkll��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916786&extension=ts&play_token=IzKJSqhkll��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916786&extension=m3u8&play_token=IzKJSqhkll��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916785&extension=ts&play_token=4k8s4oIABr��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916785&extension=ts&play_token=4k8s4oIABr��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916785&extension=ts&play_token=4k8s4oIABr��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916785&extension=ts&play_token=4k8s4oIABr��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916785&extension=ts&play_token=4k8s4oIABr��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916785&extension=m3u8&play_token=4k8s4oIABr��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916784&extension=ts&play_token=BKxMKqyRk2��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916784&extension=ts&play_token=BKxMKqyRk2��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916784&extension=ts&play_token=BKxMKqyRk2��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916784&extension=ts&play_token=BKxMKqyRk2��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916784&extension=ts&play_token=BKxMKqyRk2��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916784&extension=m3u8&play_token=BKxMKqyRk2��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916783&extension=ts&play_token=g8djJTY83j��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916783&extension=ts&play_token=g8djJTY83j��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916783&extension=ts&play_token=g8djJTY83j��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916783&extension=ts&play_token=g8djJTY83j��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916783&extension=ts&play_token=g8djJTY83j��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916783&extension=m3u8&play_token=g8djJTY83j��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916782&extension=ts&play_token=dwHSSK62ND��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916782&extension=ts&play_token=dwHSSK62ND��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916782&extension=ts&play_token=dwHSSK62ND��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916782&extension=ts&play_token=dwHSSK62ND��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916782&extension=ts&play_token=dwHSSK62ND��
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916782&extension=m3u8&play_token=dwHSSK62ND��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ [trxx]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ [trxx]
-trxx.in/play/live.php?mac=undefined&stream=1916781&extension=ts&play_token=YgTQlakfSN��
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916781&extension=ts&play_token=YgTQlakfSN��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ [iptvgoat]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=1916781&extension=ts&play_token=YgTQlakfSN��
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916781&extension=ts&play_token=YgTQlakfSN��
 #EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ [godofiptv]",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=1916781&extension=ts&play_token=YgTQlakfSN��
-#EXTINF:-1 tvg-name="godofiptv]" group-title="Streaming",AR| MBC ANIME [iptvgoat]",godofiptv]" group-title="Streaming",AR| MBC ANIME [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="godofiptv]" group-title="Streaming",AR| MBC ANIME [godofiptv]",godofiptv]" group-title="Streaming",AR| MBC ANIME [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="godofiptv]" group-title="Streaming",AR| GOBX ANIME [iptvgoat]",godofiptv]" group-title="Streaming",AR| GOBX ANIME [iptvgoat]
-iptvgoat.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
-#EXTINF:-1 tvg-name="godofiptv]" group-title="Streaming",AR| GOBX ANIME [godofiptv]",godofiptv]" group-title="Streaming",AR| GOBX ANIME [godofiptv]
-godofiptv.in/play/live.php?mac=undefined&stream=null&extension=ts&play_token=null
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916781&extension=m3u8&play_token=YgTQlakfSN��
