@@ -109,11 +109,44 @@ function normalizeChannelName(name) {
 }
 
 async function buildM3U() {
+  console.log('🔍 Loading portal status...');
+
+  // Load probe data if available
+  let probeData = null;
+  try {
+    const statusPath = path.join(__dirname, '../portal-status.json');
+    if (fs.existsSync(statusPath)) {
+      probeData = JSON.parse(fs.readFileSync(statusPath, 'utf8'));
+      console.log(`  Loaded ${probeData.portals?.length || 0} portal statuses from ${probeData.lastUpdated}`);
+    }
+  } catch (e) {
+    console.log('  No probe data found, will probe all portals');
+  }
+
+  // Filter out expired portals if we have probe data
+  const excludePortals = new Set();
+  if (probeData?.portals) {
+    for (const p of probeData.portals) {
+      // Exclude expired portals
+      if (p.expiryDays !== null && p.expiryDays <= 0) {
+        excludePortals.add(p.name);
+        console.log(`  ❌ Excluding expired: ${p.name} (expired ${Math.abs(p.expiryDays)} days ago)`);
+      }
+      // Flag expiring soon
+      else if (p.expiryDays !== null && p.expiryDays <= 7) {
+        console.log(`  ⚠️  WARNING: ${p.name} expires in ${p.expiryDays} days!`);
+      }
+    }
+  }
+
   console.log('🔍 Probing portals...');
-  
+
   // Probe in parallel batches
   const results = await Promise.allSettled(
     Object.entries(PROBE_URLS).map(async ([name, url]) => {
+      if (excludePortals.has(name)) {
+        return { name, url, ok: false, reason: 'expired' };
+      }
       const ok = await probePortal(url);
       return { name, url, ok };
     })

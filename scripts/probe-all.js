@@ -68,10 +68,12 @@ async function probePortal(name, url) {
   const mac = extractMac(url);
   const baseUrl = extractBaseUrl(url);
   
+  const now = new Date().toISOString();
   const result = {
     name,
     url,
     mac,
+    lastProbe: now,
     status: 'unknown',
     expiry: null,
     expiryDays: null,
@@ -168,6 +170,25 @@ async function probePortal(name, url) {
     result.error = `Channel fetch failed: ${e.message}`;
     result.status = 'error';
   }
+  
+  // Save detailed results as JSON for build-m3u.js to use
+  const statusData = {
+    lastUpdated: now,
+    portals: portals.map(p => ({
+      name: p.name,
+      url: p.url,
+      mac: p.mac,
+      lastProbe: p.lastProbe,
+      status: p.status,
+      expiry: p.expiry,
+      expiryDays: p.expiryDays,
+      channelCount: p.channelCount,
+      categoryCount: p.categoryCount
+    }))
+  };
+  
+  const statusPath = path.join(__dirname, '../portal-status.json');
+  fs.writeFileSync(statusPath, JSON.stringify(statusData, null, 2));
   
   // Determine status
   if (result.channelCount > 0) {
