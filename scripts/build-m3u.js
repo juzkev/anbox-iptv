@@ -142,8 +142,8 @@ function normalizeChannelName(name) {
 // Check if a channel is Singapore/Malaysia related (for sorting)
 function isSGChannel(name, groupTitle) {
   const combined = (name + ' ' + groupTitle).toUpperCase();
-  // Exclude UK channels (but keep UK| ASTRO which is a separate category)
-  if (/^UK\s*-/.test(name)) return false;
+  // Exclude UK, VN, HK, PH channels
+  if (/^(UK\s*-|VN\s*-|HK\s*-|PH\s*-)/.test(name)) return false;
 
   // Match the original script's approach: check group-title and name
   return /\bSG\s+ENTERTAINMENT\b/.test(combined) ||
@@ -153,7 +153,8 @@ function isSGChannel(name, groupTitle) {
          /\bSG\s+INDIA\b/.test(combined) ||
          /\bSG\s+FILIPINO\b/.test(combined) ||
          /\bMALAYSIA\b/.test(combined) ||
-         /\bASIA\s+SPORTS\b/.test(combined) ||
+         // Only match ASIA if it's "MALAYSIA" or "SINGAPORE" in the name
+         (/\bASIA\b/.test(combined) && /\b(MALAYSIA|SINGAPORE)\b/.test(combined)) ||
          // Only match ASTRO if it's in the group-title and not cricket/PSL
          (/\bASTRO\b/.test(groupTitle.toUpperCase()) && !/\b(PSL|CR|CRICKET)\b/.test(groupTitle)) ||
          /\bSTAR\s+HUB\b/.test(combined) ||
