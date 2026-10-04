@@ -139,7 +139,101 @@ function normalizeChannelName(name) {
     .trim();
 }
 
-// Check if a channel is PPV/temporary event (should be excluded)
+// Consolidate categories into broader groups
+const CATEGORY_MAP = {
+  // Sports
+  'Sports On Demand': 'Sports',
+  'UK ASTRO SPORTS': 'Sports',
+  'UK MATCHROOM SPORTS': 'Sports',
+  'UK GAAGO SPORTS': 'Sports',
+  'QUEBEC JUNIOR HOCKEY LEAGUE': 'Sports',
+  'PSL CRICKET': 'Sports',
+  'SERIE A/B/C': 'Sports',
+  'USA NCAA LIVE': 'Sports',
+  'USA MLB LIVE': 'Sports',
+  'TABII SPORT': 'Sports',
+  'PRIME': 'Sports',
+  'FANATIZ': 'Sports',
+  'ESPN PLAY': 'Sports',
+  'PEACOCK': 'Sports',
+  'DAZN': 'Sports',
+  'SKY SPORTS': 'Sports',
+  'SUPERSPORT': 'Sports',
+  'SPORTS': 'Sports',
+  'ASIA SPORTS': 'Sports',
+  'SG SPORTS': 'Sports',
+  'ASTRO': 'Sports',
+
+  // Movies
+  'USA MOVIES': 'Movies',
+  'CINEMANIA TV SHOWS': 'Movies',
+  'MOVIES': 'Movies',
+  'FILMS': 'Movies',
+  'CELESTIAL MOVIES': 'Movies',
+  'MOVIE HD': 'Movies',
+  'MOVIE': 'Movies',
+
+  // Entertainment
+  'ENTERTAINMENT': 'Entertainment',
+  'SG ENTERTAINMENT': 'Entertainment',
+  'SG ASIAN': 'Entertainment',
+  'SG FILIPINO': 'Entertainment',
+  'SG INDIA': 'Entertainment',
+  'GENERAL': 'Entertainment',
+  'LIVE': 'Entertainment',
+  'CHANNEL': 'Entertainment',
+
+  // Kids
+  'KIDS': 'Kids',
+  'KIDS ONEPLAY': 'Kids',
+
+  // News
+  'NEWS': 'News',
+  'CNN': 'News',
+  'BBC': 'News',
+  'ALJAZEERA': 'News',
+  'CNBC': 'News',
+  'REUTERS': 'News',
+  'FOX NEWS': 'News',
+
+  // Music
+  'MUSIC': 'Music',
+
+  // Documentary
+  'DOCUMENTARY': 'Documentary',
+  'DOCUMENTAIRE': 'Documentary',
+  'DISCOVERY': 'Documentary',
+  'NAT GEO': 'Documentary',
+  'DISCOVERY ASIA': 'Documentary',
+
+  // Religion
+  'RELIGION': 'Religion',
+  'CHRISTIAN': 'Religion',
+  'ISLAMIC': 'Religion',
+
+  // Live/Trending
+  'LIVE': 'Live',
+  'TRENDING': 'Live',
+  'LIVE NOW': 'Live',
+};
+
+// Normalize group-title to broader category
+function normalizeCategory(groupTitle) {
+  if (!groupTitle) return 'Other';
+  const upper = groupTitle.toUpperCase().trim();
+
+  // Exact match first
+  if (CATEGORY_MAP[upper]) return CATEGORY_MAP[upper];
+
+  // Check if any key is contained in the group title
+  for (const [key, value] of Object.entries(CATEGORY_MAP)) {
+    if (upper.includes(key)) return value;
+  }
+
+  return groupTitle; // Return original if no match
+}
+
+
 function isPPVChannel(name, groupTitle) {
   const combined = (name + ' ' + groupTitle).toUpperCase();
   // Exclude PPV channels
@@ -352,7 +446,7 @@ async function buildM3U() {
     const displayName = `${mainCh.name}${portalSuffix}`;
 
     return {
-      header: `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${displayName}" group-title="${mainCh.groupTitle}",${displayName}\n`,
+      header: `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${displayName}" group-title="${normalizeCategory(mainCh.groupTitle)}",${displayName}\n`,
       url: streamUrl
     };
   }
