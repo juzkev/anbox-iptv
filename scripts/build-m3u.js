@@ -12,6 +12,11 @@ const path = require('path');
 // Load portal URLs from centralized config
 const { PROBE_URLS } = require('./portals.js');
 
+// External playlist sources (will be fetched and virtualized)
+const EXTERNAL_PLAYLISTS = [
+  'http://tv123.vvvv.ee/tv.m3u'  // Korean, Chinese, Japanese, Malaysia channels
+];
+
 // Singapore/Malaysia specific markers from original anbox
 // Use word boundaries to avoid false positives (e.g., BARBASTRO, SG=handball teams)
 const SG_MARKERS = [
@@ -732,12 +737,50 @@ async function buildM3U() {
   }
   console.log(`  Found ${intlEntries.length} international channels`);
 
-  console.log(`\n📊 Total unique channels: ${totalChannels}`);
+  console.log(`\\n📊 Total unique channels: ${totalChannels}`);
 
-  return m3u;
-}
+    return m3u;
+  }
 
-async function main() {
+  // Fetch external playlist and virtualize URLs
+  async function fetchExternalPlaylist(url) {
+    try {
+      console.log(`  📥 Fetching ${url}...`);
+      const { status, data } = await fetchUrlWithRetry(url, { timeout: 15000 });
+      if (status !== 200 || !data) return null;
+    
+      // Parse and virtualize each line
+      const lines = data.split('\\n');
+      let output = '';
+      let channelCount = 0;
+    
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (line.startsWith('#EXTINF:')) {
+          const nextLine = (lines[i + 1] || '').trim();
+          if (nextLine && !nextLine.startsWith('#')) {
+            const b64Url = Buffer.from(nextLine).toString('base64');
+            const virtualUrl = `${customDomain}/resolve?src=${encodeURIComponent(b64Url)}`;
+            output += `${line}\\n${virtualUrl}\\n`;
+            channelCount++;
+            i++; // skip original URL line
+          } else {
+            output += line + '\\n';
+          }
+        } else {
+          output += line + '\\n';
+        }
+      }
+    
+      console.log(`    → ${channelCount} channels`);
+      return output;
+    } catch (e) {
+      console.error(`    ❌ Error: ${e.message}`);
+      return null;
+    }
+  }
+
+  async function main() {
   try {
     const m3u = await buildM3U();
     const outputPath = path.join(__dirname, '..', 'playlist.m3u');
