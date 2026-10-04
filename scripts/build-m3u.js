@@ -26,7 +26,9 @@ const PROBE_URLS = {
   wowtv2: "http://wowtv.cc:80/play/live.php?mac=00:1A:79:B6:CB:5A&stream=577227&extension=ts&play_token=wzgzOhA7oQ",
   skunky4: "http://skunkytv.live:80/play/live.php?mac=00:1A:79:B6:F3:A5&stream=577227&extension=ts&play_token=1WKOIaENI7",
   suiptv2: "http://suiptv265.xyz:80/play/live.php?mac=00:1A:79:73:A6:5D&stream=577220&extension=ts&play_token=trbtKVDfuG",
-  sbhgoldpro4: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:62:33:32&stream=626823&extension=ts&play_token=Rb4hRVC6Rs"
+  sbhgoldpro4: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:62:33:32&stream=626823&extension=ts&play_token=Rb4hRVC6Rs",
+  klaratv: "http://klaratv.com:80/play/live.php?mac=00:1A:79:AD:57:C7&stream=1&extension=ts&play_token=J2csP5nYOl",
+  seritv: "http://ix.seritv.cc:80/play/live.php?mac=00:1A:79:86:39:E9&stream=1&extension=ts&play_token=test"
 };
 
 const KEEP_CHANNELS = [
