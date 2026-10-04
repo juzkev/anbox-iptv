@@ -1,5 +1,5 @@
 #EXTM3U
-#Generated: 2026-10-04T12:17:40.936Z
+#Generated: 2026-10-04T12:19:20.268Z
 #Anime Channels (Combined Fallback)
 
 #EXTINF:-1 tvg-id="stream-fbcc49b7-75a6-456c-a7bf-6b6300597e50" tvg-name="Animax HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/532_1920x1080_HTV.png" group-title="🤠國際體育",Animax HD
@@ -20,223 +20,223 @@ http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=122934&extensi
 #EXTINF:-1 tvg-id="1372056" tvg-name="KIDS| CARTOONITO" group-title="Other",KIDS| CARTOONITO [greatott]
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1372056&extension=ts&play_token=jbuhEfzy8Z
 
-#EXTINF:-1 tvg-id="1729368" tvg-name="EN| XMAS CARTOONS [greatott,trxx, iptvgoat, godofiptv]"Regional",EN| XMAS CARTOONS
+#EXTINF:-1 tvg-id="1729368" tvg-name="EN| XMAS CARTOONS [greatott,trxx, iptvgoat, godofiptv]",EN| XMAS CARTOONS
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1729368&extension=ts&play_token=73b0qAEa02
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1729368&extension=ts&play_token=73b0qAEa02
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1729368&extension=ts&play_token=73b0qAEa02
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1729368&extension=ts&play_token=73b0qAEa02
 
-#EXTINF:-1 tvg-id="1369601" tvg-name="EN| CHRISTMAS CARTOONS [greatott,trxx, iptvgoat, godofiptv]"Regional",EN| CHRISTMAS CARTOONS
+#EXTINF:-1 tvg-id="1369601" tvg-name="EN| CHRISTMAS CARTOONS [greatott,trxx, iptvgoat, godofiptv]",EN| CHRISTMAS CARTOONS
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1369601&extension=ts&play_token=HTNnRFi43a
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1369601&extension=ts&play_token=HTNnRFi43a
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1369601&extension=ts&play_token=HTNnRFi43a
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1369601&extension=ts&play_token=HTNnRFi43a
 
-#EXTINF:-1 tvg-id="1014234" tvg-name="UK| CARTOON NETWORK +1 [greatott,trxx, iptvgoat, godofiptv]"Kids",UK| CARTOON NETWORK +1
+#EXTINF:-1 tvg-id="1014234" tvg-name="UK| CARTOON NETWORK +1 [greatott,trxx, iptvgoat, godofiptv]",UK| CARTOON NETWORK +1
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1014234&extension=ts&play_token=76PrUQlzzX
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1014234&extension=ts&play_token=76PrUQlzzX
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1014234&extension=ts&play_token=76PrUQlzzX
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1014234&extension=ts&play_token=76PrUQlzzX
 
-#EXTINF:-1 tvg-id="1905951" tvg-name="UK-NOWTV| CARTOON NETWORK FHD [greatott,trxx, iptvgoat, godofiptv]"Entertainment",UK-NOWTV| CARTOON NETWORK FHD
+#EXTINF:-1 tvg-id="1905951" tvg-name="UK-NOWTV| CARTOON NETWORK FHD [greatott,trxx, iptvgoat, godofiptv]",UK-NOWTV| CARTOON NETWORK FHD
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1905951&extension=ts&play_token=FhW9CDxdnK
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1905951&extension=ts&play_token=FhW9CDxdnK
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1905951&extension=ts&play_token=FhW9CDxdnK
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1905951&extension=ts&play_token=FhW9CDxdnK
 
-#EXTINF:-1 tvg-id="1905823" tvg-name="UK-NOWTV| SKYANIMATION FHD [greatott,trxx, iptvgoat, godofiptv]"Entertainment",UK-NOWTV| SKYANIMATION FHD
+#EXTINF:-1 tvg-id="1905823" tvg-name="UK-NOWTV| SKYANIMATION FHD [greatott,trxx, iptvgoat, godofiptv]",UK-NOWTV| SKYANIMATION FHD
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1905823&extension=ts&play_token=hAVWSmZCtR
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1905823&extension=ts&play_token=hAVWSmZCtR
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1905823&extension=ts&play_token=hAVWSmZCtR
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1905823&extension=ts&play_token=hAVWSmZCtR
 
-#EXTINF:-1 tvg-id="691211" tvg-name="IT| SKY CARTOON NETWORK UHD [greatott,iptvgoat, godofiptv]"Regional",IT| SKY CARTOON NETWORK UHD
+#EXTINF:-1 tvg-id="691211" tvg-name="IT| SKY CARTOON NETWORK UHD [greatott,iptvgoat, godofiptv]",IT| SKY CARTOON NETWORK UHD
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=691211&extension=ts&play_token=qJ4MoMDUrM7
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=691211&extension=ts&play_token=qJ4MoMDUrM7
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=691211&extension=ts&play_token=qJ4MoMDUrM7
 
-#EXTINF:-1 tvg-id="1791911" tvg-name="IT| 24/7 DRAGON BALL Z CHANNEL FHD (DUAL AUDIO ITA/ENG IT [greatott,iptvgoat, godofiptv]"Movies",IT| 24/7 DRAGON BALL Z CHANNEL FHD (DUAL AUDIO ITA/ENG IT
+#EXTINF:-1 tvg-id="1791911" tvg-name="IT| 24/7 DRAGON BALL Z CHANNEL FHD (DUAL AUDIO ITA/ENG IT [greatott,iptvgoat, godofiptv]",IT| 24/7 DRAGON BALL Z CHANNEL FHD (DUAL AUDIO ITA/ENG IT
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1791911&extension=ts&play_token=ktxnPlJd3d
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1791911&extension=ts&play_token=ktxnPlJd3d
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1791911&extension=ts&play_token=ktxnPlJd3d
 
-#EXTINF:-1 tvg-id="926524" tvg-name="ARG| CARTOON NETWORK [greatott,godofiptv]"Sports",ARG| CARTOON NETWORK
+#EXTINF:-1 tvg-id="926524" tvg-name="ARG| CARTOON NETWORK [greatott,godofiptv]",ARG| CARTOON NETWORK
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=926524&extension=ts&play_token=pNFsACUouz7
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=926524&extension=ts&play_token=pNFsACUouz7
 
-#EXTINF:-1 tvg-id="926560" tvg-name="ARG| CARTOONITO [greatott,godofiptv]"Sports",ARG| CARTOONITO
+#EXTINF:-1 tvg-id="926560" tvg-name="ARG| CARTOONITO [greatott,godofiptv]",ARG| CARTOONITO
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=926560&extension=ts&play_token=tppkwx4p4x7
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=926560&extension=ts&play_token=tppkwx4p4x7
 
-#EXTINF:-1 tvg-id="552909" tvg-name="MXC| CARTOON NETWORK HD [greatott,godofiptv]"Streaming",MXC| CARTOON NETWORK HD
+#EXTINF:-1 tvg-id="552909" tvg-name="MXC| CARTOON NETWORK HD [greatott,godofiptv]",MXC| CARTOON NETWORK HD
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=552909&extension=ts&play_token=uC7n0rG9Jx7
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=552909&extension=ts&play_token=uC7n0rG9Jx7
 
-#EXTINF:-1 tvg-id="1547028" tvg-name="MXC| CARTOONITO [greatott,godofiptv]"Streaming",MXC| CARTOONITO
+#EXTINF:-1 tvg-id="1547028" tvg-name="MXC| CARTOONITO [greatott,godofiptv]",MXC| CARTOONITO
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1547028&extension=ts&play_token=Gw0ffM8UNa
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1547028&extension=ts&play_token=Gw0ffM8UNa
 
-#EXTINF:-1 tvg-id="45607" tvg-name="US| CARTOON NETWORK HD [trxx,iptvgoat, godofiptv]"Kids",US| CARTOON NETWORK HD
+#EXTINF:-1 tvg-id="45607" tvg-name="US| CARTOON NETWORK HD [trxx,iptvgoat, godofiptv]",US| CARTOON NETWORK HD
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=45607&extension=ts&play_token=IeWBjeI8T67
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=45607&extension=ts&play_token=IeWBjeI8T67
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=45607&extension=ts&play_token=IeWBjeI8T67
 
-#EXTINF:-1 tvg-id="754475" tvg-name="US| CARTOON NETWORK EAST HD [trxx,iptvgoat, godofiptv]"Kids",US| CARTOON NETWORK EAST HD
+#EXTINF:-1 tvg-id="754475" tvg-name="US| CARTOON NETWORK EAST HD [trxx,iptvgoat, godofiptv]",US| CARTOON NETWORK EAST HD
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=754475&extension=ts&play_token=IFn1Y0xdDC
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=754475&extension=ts&play_token=IFn1Y0xdDC
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=754475&extension=ts&play_token=IFn1Y0xdDC
 
-#EXTINF:-1 tvg-id="91781" tvg-name="US| CARTOON NETWORK WEST HD [trxx,iptvgoat, godofiptv]"Kids",US| CARTOON NETWORK WEST HD
+#EXTINF:-1 tvg-id="91781" tvg-name="US| CARTOON NETWORK WEST HD [trxx,iptvgoat, godofiptv]",US| CARTOON NETWORK WEST HD
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=91781&extension=ts&play_token=QM0dh6aBiE7
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=91781&extension=ts&play_token=QM0dh6aBiE7
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=91781&extension=ts&play_token=QM0dh6aBiE7
 
-#EXTINF:-1 tvg-id="1920483" tvg-name="PRIME| ADULT ANIMATION ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Sports",PRIME| ADULT ANIMATION ᴿᴬᵂ
+#EXTINF:-1 tvg-id="1920483" tvg-name="PRIME| ADULT ANIMATION ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",PRIME| ADULT ANIMATION ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920483&extension=ts&play_token=4EbuDhFJ9y��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920483&extension=ts&play_token=4EbuDhFJ9y��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920483&extension=ts&play_token=4EbuDhFJ9y��
 
-#EXTINF:-1 tvg-id="1920454" tvg-name="PRIME| ANIMATION FAVORITES ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Sports",PRIME| ANIMATION FAVORITES ᴿᴬᵂ
+#EXTINF:-1 tvg-id="1920454" tvg-name="PRIME| ANIMATION FAVORITES ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",PRIME| ANIMATION FAVORITES ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920454&extension=ts&play_token=kvvMJgsO5b��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920454&extension=ts&play_token=kvvMJgsO5b��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920454&extension=ts&play_token=kvvMJgsO5b��
 
-#EXTINF:-1 tvg-id="1920453" tvg-name="PRIME| ANIME X HIDIVE ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Sports",PRIME| ANIME X HIDIVE ᴿᴬᵂ
+#EXTINF:-1 tvg-id="1920453" tvg-name="PRIME| ANIME X HIDIVE ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",PRIME| ANIME X HIDIVE ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920453&extension=ts&play_token=eiA9A5MDch��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920453&extension=ts&play_token=eiA9A5MDch��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920453&extension=ts&play_token=eiA9A5MDch��
 
-#EXTINF:-1 tvg-id="1920403" tvg-name="PRIME| CARTOON REWIND ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Sports",PRIME| CARTOON REWIND ᴿᴬᵂ
+#EXTINF:-1 tvg-id="1920403" tvg-name="PRIME| CARTOON REWIND ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",PRIME| CARTOON REWIND ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920403&extension=ts&play_token=Tk8yIRj0Xd��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920403&extension=ts&play_token=Tk8yIRj0Xd��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920403&extension=ts&play_token=Tk8yIRj0Xd��
 
-#EXTINF:-1 tvg-id="1920322" tvg-name="PRIME| CRUNCHYROLL ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Sports",PRIME| CRUNCHYROLL ᴿᴬᵂ
+#EXTINF:-1 tvg-id="1920322" tvg-name="PRIME| CRUNCHYROLL ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",PRIME| CRUNCHYROLL ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920322&extension=ts&play_token=yp3RtX37r5��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920322&extension=ts&play_token=yp3RtX37r5��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920322&extension=ts&play_token=yp3RtX37r5��
 
-#EXTINF:-1 tvg-id="2151819" tvg-name="TV| CARTOON NETWORK ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Sports",TV| CARTOON NETWORK ᴿᴬᵂ
+#EXTINF:-1 tvg-id="2151819" tvg-name="TV| CARTOON NETWORK ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",TV| CARTOON NETWORK ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=2151819&extension=ts&play_token=Aw6d7rzFIQ��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=2151819&extension=ts&play_token=Aw6d7rzFIQ��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=2151819&extension=ts&play_token=Aw6d7rzFIQ��
 
-#EXTINF:-1 tvg-id="1430356" tvg-name="US| DRAGON BALL SUPER FHD [trxx,iptvgoat, godofiptv]"Movies",US| DRAGON BALL SUPER FHD
+#EXTINF:-1 tvg-id="1430356" tvg-name="US| DRAGON BALL SUPER FHD [trxx,iptvgoat, godofiptv]",US| DRAGON BALL SUPER FHD
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1430356&extension=ts&play_token=HpMyiMy5ff��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1430356&extension=ts&play_token=HpMyiMy5ff��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1430356&extension=ts&play_token=HpMyiMy5ff��
 
-#EXTINF:-1 tvg-id="1430262" tvg-name="US| LOONEY TUNES CARTOONS CLASSIC FHD [trxx,iptvgoat, godofiptv]"Movies",US| LOONEY TUNES CARTOONS CLASSIC FHD
+#EXTINF:-1 tvg-id="1430262" tvg-name="US| LOONEY TUNES CARTOONS CLASSIC FHD [trxx,iptvgoat, godofiptv]",US| LOONEY TUNES CARTOONS CLASSIC FHD
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1430262&extension=ts&play_token=lPVcuayal3��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1430262&extension=ts&play_token=lPVcuayal3��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1430262&extension=ts&play_token=lPVcuayal3��
 
-#EXTINF:-1 tvg-id="1430261" tvg-name="US| LOONEY TUNES CARTOONS FHD [trxx,iptvgoat, godofiptv]"Movies",US| LOONEY TUNES CARTOONS FHD
+#EXTINF:-1 tvg-id="1430261" tvg-name="US| LOONEY TUNES CARTOONS FHD [trxx,iptvgoat, godofiptv]",US| LOONEY TUNES CARTOONS FHD
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1430261&extension=ts&play_token=h9rGuacjsu��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1430261&extension=ts&play_token=h9rGuacjsu��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1430261&extension=ts&play_token=h9rGuacjsu��
 
-#EXTINF:-1 tvg-id="1941408" tvg-name="US| ONE PIECE ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Streaming",US| ONE PIECE ᴿᴬᵂ
+#EXTINF:-1 tvg-id="1941408" tvg-name="US| ONE PIECE ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",US| ONE PIECE ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1941408&extension=ts&play_token=xjiBAFOpUb��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1941408&extension=ts&play_token=xjiBAFOpUb��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1941408&extension=ts&play_token=xjiBAFOpUb��
 
-#EXTINF:-1 tvg-id="1193699" tvg-name="US| 24/7 CARTOON BOX [trxx,iptvgoat, godofiptv]"Movies",US| 24/7 CARTOON BOX
+#EXTINF:-1 tvg-id="1193699" tvg-name="US| 24/7 CARTOON BOX [trxx,iptvgoat, godofiptv]",US| 24/7 CARTOON BOX
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1193699&extension=ts&play_token=9VjKyslVYO��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1193699&extension=ts&play_token=9VjKyslVYO��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1193699&extension=ts&play_token=9VjKyslVYO��
 
-#EXTINF:-1 tvg-id="1345824" tvg-name="US| 24/7 DRAGON BALL Z [trxx,iptvgoat, godofiptv]"Movies",US| 24/7 DRAGON BALL Z
+#EXTINF:-1 tvg-id="1345824" tvg-name="US| 24/7 DRAGON BALL Z [trxx,iptvgoat, godofiptv]",US| 24/7 DRAGON BALL Z
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1345824&extension=ts&play_token=RmEEUycO6a��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1345824&extension=ts&play_token=RmEEUycO6a��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1345824&extension=ts&play_token=RmEEUycO6a��
 
-#EXTINF:-1 tvg-id="1916793" tvg-name="EN| ONEPLAY ANIME info ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME info ᴴᴰ
+#EXTINF:-1 tvg-id="1916793" tvg-name="EN| ONEPLAY ANIME info ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME info ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916793&extension=ts&play_token=KDdXsgsVC9��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916793&extension=ts&play_token=KDdXsgsVC9��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916793&extension=ts&play_token=KDdXsgsVC9��
 
-#EXTINF:-1 tvg-id="1916792" tvg-name="EN| ONEPLAY ANIME 1 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 1 ᴴᴰ
+#EXTINF:-1 tvg-id="1916792" tvg-name="EN| ONEPLAY ANIME 1 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 1 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916792&extension=ts&play_token=O788crd02m��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916792&extension=ts&play_token=O788crd02m��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916792&extension=ts&play_token=O788crd02m��
 
-#EXTINF:-1 tvg-id="1916791" tvg-name="EN| ONEPLAY ANIME 2 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 2 ᴴᴰ
+#EXTINF:-1 tvg-id="1916791" tvg-name="EN| ONEPLAY ANIME 2 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 2 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916791&extension=ts&play_token=gjPZuJJABf��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916791&extension=ts&play_token=gjPZuJJABf��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916791&extension=ts&play_token=gjPZuJJABf��
 
-#EXTINF:-1 tvg-id="1916790" tvg-name="EN| ONEPLAY ANIME 3 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 3 ᴴᴰ
+#EXTINF:-1 tvg-id="1916790" tvg-name="EN| ONEPLAY ANIME 3 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 3 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916790&extension=ts&play_token=Aa4vmpVYen��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916790&extension=ts&play_token=Aa4vmpVYen��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916790&extension=ts&play_token=Aa4vmpVYen��
 
-#EXTINF:-1 tvg-id="1916789" tvg-name="EN| ONEPLAY ANIME 4 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 4 ᴴᴰ
+#EXTINF:-1 tvg-id="1916789" tvg-name="EN| ONEPLAY ANIME 4 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 4 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916789&extension=ts&play_token=r5E64DaevR��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916789&extension=ts&play_token=r5E64DaevR��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916789&extension=ts&play_token=r5E64DaevR��
 
-#EXTINF:-1 tvg-id="1916788" tvg-name="EN| ONEPLAY ANIME 5 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 5 ᴴᴰ
+#EXTINF:-1 tvg-id="1916788" tvg-name="EN| ONEPLAY ANIME 5 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 5 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916788&extension=ts&play_token=Wz3tVxyM4M��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916788&extension=ts&play_token=Wz3tVxyM4M��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916788&extension=ts&play_token=Wz3tVxyM4M��
 
-#EXTINF:-1 tvg-id="1916787" tvg-name="EN| ONEPLAY ANIME 6 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 6 ᴴᴰ
+#EXTINF:-1 tvg-id="1916787" tvg-name="EN| ONEPLAY ANIME 6 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 6 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916787&extension=ts&play_token=nkNcPtrqs3��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916787&extension=ts&play_token=nkNcPtrqs3��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916787&extension=ts&play_token=nkNcPtrqs3��
 
-#EXTINF:-1 tvg-id="1916786" tvg-name="EN| ONEPLAY ANIME 7 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 7 ᴴᴰ
+#EXTINF:-1 tvg-id="1916786" tvg-name="EN| ONEPLAY ANIME 7 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 7 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916786&extension=ts&play_token=rf50H55rle��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916786&extension=ts&play_token=rf50H55rle��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916786&extension=ts&play_token=rf50H55rle��
 
-#EXTINF:-1 tvg-id="1916785" tvg-name="EN| ONEPLAY ANIME 8 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 8 ᴴᴰ
+#EXTINF:-1 tvg-id="1916785" tvg-name="EN| ONEPLAY ANIME 8 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 8 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916785&extension=ts&play_token=DMa4cBPLF7��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916785&extension=ts&play_token=DMa4cBPLF7��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916785&extension=ts&play_token=DMa4cBPLF7��
 
-#EXTINF:-1 tvg-id="1916784" tvg-name="EN| ONEPLAY ANIME 9 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 9 ᴴᴰ
+#EXTINF:-1 tvg-id="1916784" tvg-name="EN| ONEPLAY ANIME 9 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 9 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916784&extension=ts&play_token=2ODCUToRcX��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916784&extension=ts&play_token=2ODCUToRcX��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916784&extension=ts&play_token=2ODCUToRcX��
 
-#EXTINF:-1 tvg-id="1916783" tvg-name="EN| ONEPLAY ANIME 10 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 10 ᴴᴰ
+#EXTINF:-1 tvg-id="1916783" tvg-name="EN| ONEPLAY ANIME 10 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 10 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916783&extension=ts&play_token=vZiQsPaxLp��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916783&extension=ts&play_token=vZiQsPaxLp��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916783&extension=ts&play_token=vZiQsPaxLp��
 
-#EXTINF:-1 tvg-id="1916782" tvg-name="EN| ONEPLAY ANIME 11 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 11 ᴴᴰ
+#EXTINF:-1 tvg-id="1916782" tvg-name="EN| ONEPLAY ANIME 11 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 11 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916782&extension=ts&play_token=ajcw19FwVQ��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916782&extension=ts&play_token=ajcw19FwVQ��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916782&extension=ts&play_token=ajcw19FwVQ��
 
-#EXTINF:-1 tvg-id="1916781" tvg-name="EN| ONEPLAY ANIME 12 ᴴᴰ [trxx,iptvgoat, godofiptv]"Sports",EN| ONEPLAY ANIME 12 ᴴᴰ
+#EXTINF:-1 tvg-id="1916781" tvg-name="EN| ONEPLAY ANIME 12 ᴴᴰ [trxx,iptvgoat, godofiptv]",EN| ONEPLAY ANIME 12 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916781&extension=ts&play_token=4zbzXYKkvA��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916781&extension=ts&play_token=4zbzXYKkvA��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916781&extension=ts&play_token=4zbzXYKkvA��
 
-#EXTINF:-1 tvg-id="1942780" tvg-name="24/7 BORUTO NARUTO NEXT GENERATIONS [trxx,iptvgoat, godofiptv]"Kids",24/7 BORUTO NARUTO NEXT GENERATIONS
+#EXTINF:-1 tvg-id="1942780" tvg-name="24/7 BORUTO NARUTO NEXT GENERATIONS [trxx,iptvgoat, godofiptv]",24/7 BORUTO NARUTO NEXT GENERATIONS
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1942780&extension=ts&play_token=U86frLQJHE��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1942780&extension=ts&play_token=U86frLQJHE��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1942780&extension=ts&play_token=U86frLQJHE��
 
-#EXTINF:-1 tvg-id="1942552" tvg-name="24/7 LOONEY TUNES CARTOONS [trxx,iptvgoat, godofiptv]"Kids",24/7 LOONEY TUNES CARTOONS
+#EXTINF:-1 tvg-id="1942552" tvg-name="24/7 LOONEY TUNES CARTOONS [trxx,iptvgoat, godofiptv]",24/7 LOONEY TUNES CARTOONS
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1942552&extension=ts&play_token=QIiafQoVxA��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1942552&extension=ts&play_token=QIiafQoVxA��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1942552&extension=ts&play_token=QIiafQoVxA��
 
-#EXTINF:-1 tvg-id="1943516" tvg-name="24/7 OUR CARTOON PRESIDENT [trxx,iptvgoat, godofiptv]"Kids",24/7 OUR CARTOON PRESIDENT
+#EXTINF:-1 tvg-id="1943516" tvg-name="24/7 OUR CARTOON PRESIDENT [trxx,iptvgoat, godofiptv]",24/7 OUR CARTOON PRESIDENT
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1943516&extension=ts&play_token=dVJQdvSe4w��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1943516&extension=ts&play_token=dVJQdvSe4w��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1943516&extension=ts&play_token=dVJQdvSe4w��
 
-#EXTINF:-1 tvg-id="1944067" tvg-name="24/7 DRAGON BALL Z [trxx,iptvgoat, godofiptv]"Kids",24/7 DRAGON BALL Z
+#EXTINF:-1 tvg-id="1944067" tvg-name="24/7 DRAGON BALL Z [trxx,iptvgoat, godofiptv]",24/7 DRAGON BALL Z
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1944067&extension=ts&play_token=w2uxYvyUNM��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1944067&extension=ts&play_token=w2uxYvyUNM��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1944067&extension=ts&play_token=w2uxYvyUNM��
 
-#EXTINF:-1 tvg-id="1920798" tvg-name="PRIME| CARTOON NETWORK ᴿᴬᵂ [trxx,iptvgoat, godofiptv]"Sports",PRIME| CARTOON NETWORK ᴿᴬᵂ
+#EXTINF:-1 tvg-id="1920798" tvg-name="PRIME| CARTOON NETWORK ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",PRIME| CARTOON NETWORK ᴿᴬᵂ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920798&extension=ts&play_token=PrpLxmrNkz��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920798&extension=ts&play_token=PrpLxmrNkz��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920798&extension=ts&play_token=PrpLxmrNkz��
