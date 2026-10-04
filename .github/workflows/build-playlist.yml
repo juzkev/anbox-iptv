@@ -9,11 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,7 +29,6 @@ jobs:
         run: |
           if [ -f "playlist.m3u" ]; then
             AGE=$(( $(date +%s) - $(stat -c %Y playlist.m3u) ))
-            # Skip if less than 2.5 hours old (allowing for 2hr schedule + buffer)
             if [ $AGE -lt 9000 ]; then
               echo "Skipping: playlist is only $((AGE/60/60)) hours old"
               echo "skip=true" >> $GITHUB_OUTPUT
@@ -48,15 +47,13 @@ jobs:
 
       - name: Commit and push if changed
         if: steps.check.outputs.skip != 'true'
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "juzkev"
           git config user.email "juzkev@gmail.com"
           git add playlist.m3u portal-status.json
           if ! git diff --cached --quiet; then
             git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S')"
-            git push https://x-access-token:$GH_PAT@github.com/juzkev/anbox-iptv.git main
+            git push
           fi
 
   pages:
