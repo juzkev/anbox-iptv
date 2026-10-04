@@ -53,7 +53,7 @@ jobs:
           git config user.name "juzkev"
           git config user.email "juzkev@gmail.com"
           git remote set-url origin https://x-access-token:$GH_PAT@github.com/juzkev/anbox-iptv.git
-          git add playlist.m3u
+          git add playlist.m3u anime-all.m3u
           if ! git diff --cached --quiet; then
             git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
             git push

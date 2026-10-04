@@ -819,7 +819,132 @@ async function buildM3U() {
     }
   }
 
-  async function main() {
+  
+/**
+ * Build anime-only playlist from main M3U
+ * - Only includes channels with ANIMAX in name
+ * - Skips "Anime X HIDIVE" and "EN| ANIME TV"
+ * - Extracts fresh tokens from portal URLs via worker base64 decode
+ * - Converts to direct portal URLs with godofiptv as first fallback
+ * - Adds PH|ANIMAX (godofiptv) as fallback for Animax HD
+ */
+function buildAnimePlaylist(m3u) {
+  const portalMap = {};
+  for (const [name, info] of Object.entries(PROBE_URLS)) {
+    try {
+      const parsed = new URL(info);
+      portalMap[name] = {
+        base: `${parsed.protocol}//${parsed.hostname}${parsed.port ? ':' + parsed.port : ''}`,
+        mac: parsed.searchParams.get('mac')
+      };
+    } catch(e) {}
+  }
+
+  const lines = m3u.split('\n');
+  const result = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (line.startsWith('#EXTINF')) {
+      const url = lines[i + 1] || '';
+      const name = line.match(/,(.+)$/)?.[1] || '';
+
+      // Include ANIMAX channels and ONEPLAY ANIME channels
+      const isAnimax = name.toUpperCase().includes('ANIMAX');
+      const isOneplayAnime = name.toUpperCase().includes('ONEPLAY') && name.toUpperCase().includes('ANIME');
+
+      if (!isAnimax && !isOneplayAnime) {
+        i += 2;
+        continue;
+      }
+
+      // Skip Anime X HIDIVE (dubbed)
+      if (name.toLowerCase().includes('anime x hidive')) {
+        i += 2;
+        continue;
+      }
+
+      // Skip V+, JP, PH Animax variants
+      if (name.includes('V+| ANIMAX') || name.includes('JP| ANIMAX') || name.includes('PH|ANIMAX')) {
+        i += 2;
+        continue;
+      }
+
+      let cleanName = name.replace(/\[.*?\]/g, '').trim();
+      cleanName = cleanName.replace(/\s+/g, ' ');
+
+      // Fix corrupted names from portal format
+      if (cleanName.includes(']') || cleanName.includes('group-title')) {
+        const match = cleanName.match(/(EN\| ONEPLAY ANIME.*?ᴰᵍ)/);
+        if (match) cleanName = match[1];
+      }
+
+      if (url.includes('tv123.cc.cd')) {
+        if (cleanName === 'Animax HD') {
+          result.push(`#EXTINF:-1 tvg-name="${cleanName}",${cleanName}`);
+          result.push(url);
+          result.push('');
+        }
+      } else if (url.includes('workers.dev') && isOneplayAnime) {
+        const b64 = url.split('src=')[1];
+        const b64Decoded = decodeURIComponent(b64);
+        const decoded = Buffer.from(b64Decoded, 'base64').toString('utf8');
+
+        const streamIdMatch = decoded.match(/stream=(\d+)/);
+        const streamId = streamIdMatch ? streamIdMatch[1] : null;
+        const tokenMatch = decoded.match(/play_token=([A-Za-z0-9]+)/);
+        const token = tokenMatch ? tokenMatch[1] : '';
+        const extMatch = decoded.match(/extension=(\w+)/);
+        const extension = extMatch ? extMatch[1] : 'ts';
+
+        if (streamId && token && cleanName) {
+          const portalMatch = name.match(/\[([^\]]+)\]/);
+          if (portalMatch) {
+            const portalNames = portalMatch[1].split(',').map(p => p.trim());
+            
+            result.push(`#EXTINF:-1 tvg-name="${cleanName}",${cleanName}`);
+
+            // Order URLs: godofiptv first, then others
+            const urls = [];
+            for (const pName of portalNames) {
+              const p = portalMap[pName];
+              if (p) {
+                urls.push(`${p.base}/play/live.php?mac=${p.mac}&stream=${streamId}&extension=${extension}&play_token=${token}`);
+              }
+            }
+            
+            // Sort: godofiptv first
+            urls.sort((a, b) => {
+              if (a.includes('godofiptv') && !b.includes('godofiptv')) return -1;
+              if (!a.includes('godofiptv') && b.includes('godofiptv')) return 1;
+              return 0;
+            });
+            
+            urls.forEach(u => result.push(u));
+            result.push('');
+          }
+        }
+      }
+      i += 2;
+    } else {
+      i++;
+    }
+  }
+
+  let output = '#EXTM3U\n';
+  output += `#Generated: ${new Date().toISOString()}\n`;
+  output += '#Anime Channels\n\n';
+  
+  for (const line of result) {
+    output += line + '\n';
+  }
+
+  return output;
+}
+
+async function main() {
   try {
     const m3u = await buildM3U();
     const outputPath = path.join(__dirname, '..', 'playlist.m3u');
