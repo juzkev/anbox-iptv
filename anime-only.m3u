@@ -1,0 +1,18 @@
+#EXTM3U
+#Generated: 2026-10-04T07:38:14.738Z
+#Anime Channels (tv123 - Verified)
+
+#EXTINF:-1 tvg-id="stream-fe278051-83fd-43bd-ad36-f8e2b90422aa" tvg-name="Anime 24/7 (ROKU)" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/OM659334/3760597490189526-7_SC_logo_color.jpg" group-title="日本 | Japan",Anime 24/7 (ROKU)
+http://tv123.cc.cd/live.php?ch=898&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=272d010c0c7c5d7ad3f07746b88f85353cfba237dde124947ddf1d18d7c55173
+#EXTINF:-1 tvg-id="stream-d8c46a1e-6471-443b-bd36-0f9cb4292d65" tvg-name="Anime Visión (Spain)" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/ES300029LP_20250326T013525SQUARE.png" group-title="日本 | Japan",Anime Visión (Spain)
+http://tv123.cc.cd/live.php?ch=899&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=34315b187663200556f6afe021cc205f9ca18367d6c7383961bb42f1c41dc900
+#EXTINF:-1 tvg-id="stream-73dd6d26-81c9-49e6-abf9-8fe8fb3fb0cf" tvg-name="Anime Visión Classics (Spain)" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/ES3000288I_20250326T013528SQUARE.png" group-title="日本 | Japan",Anime Visión Classics (Spain)
+http://tv123.cc.cd/live.php?ch=900&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=95a8490596b068ba3a56dbae562e80cfbe12281661ad298b9593ccb05e74f387
+#EXTINF:-1 tvg-id="stream-b6c52291-5dab-4dd5-b09e-b81aa06da3bc" tvg-name="AnimeXHIDIVE (ROKU)" tvg-logo="https://images.sr.roku.com/idType/roku-trc/context/trc/id/0b92deed3dd556cf91c911a36e948fde/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1730996857858_Anime_HiDive_HXA_ImageHUD.png" group-title="日本 | Japan",AnimeXHIDIVE (ROKU)
+http://tv123.cc.cd/live.php?ch=901&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=a7bb43ae60774c72edaa644a44d848d276f980ef0c00d540ce189f347ef9c03d
+#EXTINF:-1 tvg-id="stream-ccd9635b-ae92-4f81-9f42-485917bdc043" tvg-name="FILMRISE Anime (TCL)" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU132409/12531341656995521-FilmRiseAnimeRebrand_SC_logo_color.png" group-title="日本 | Japan",FILMRISE Anime (TCL)
+http://tv123.cc.cd/live.php?ch=910&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=8e93158fe3b80b3d0243499d5964c37fed83cea9326bbadb24193d4ab49a8909
+#EXTINF:-1 tvg-id="stream-ef7730c1-8a6d-4c7b-82b8-b90a0d5483e5" tvg-name="TCL Anime (TCL+)" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU572810/14490431765440765-TCL_Anime_SC_logo_color.png" group-title="日本 | Japan",TCL Anime (TCL+)
+http://tv123.cc.cd/live.php?ch=927&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=30fd8835adf51eb3d11ac4b2113e77c5bb18c6fbb1b1461a720e653f29c0abfd
+#EXTINF:-1 tvg-id="stream-fbcc49b7-75a6-456c-a7bf-6b6300597e50" tvg-name="Animax HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/532_1920x1080_HTV.png" group-title="🤠國際體育",Animax HD
+http://tv123.cc.cd/live.php?ch=1030&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=b59a5da373dc87bcc159b0ca4751874c1b2913d99c6f8d91b4802a7476127664
