@@ -135,7 +135,6 @@ async function buildM3U() {
     const parsed = new URL(portal.url);
     const portalBase = parsed.origin;
     const mac = parsed.searchParams.get('mac');
-    const token = parsed.searchParams.get('play_token');
     
     let currentMarker = null;
     
@@ -146,6 +145,25 @@ async function buildM3U() {
       if (/^#{3,}.+#{3,}$/i.test(name)) {
         currentMarker = name.replace(/#/g, '').trim();
         continue;
+      }
+      
+      // Extract fresh token from channel's cmd field (ffmpeg URL)
+      const cmd = ch.cmd || '';
+      let token = mac; // fallback to mac if no token found
+      
+      // Try to extract play_token from cmd
+      const tokenMatch = cmd.match(/play_token=([A-Za-z0-9]+)/);
+      if (tokenMatch) {
+        token = tokenMatch[1];
+      } else {
+        // Try to extract full stream URL from cmd
+        const urlMatch = cmd.match(/(https?:\/\/[^\\s"']+)/);
+        if (urlMatch) {
+          try {
+            const urlObj = new URL(urlMatch[1]);
+            token = urlObj.searchParams.get('play_token') || token;
+          } catch {}
+        }
       }
       
       const realUrl = `${portalBase}/play/live.php?mac=${mac}&stream=${ch.id}&extension=ts&play_token=${token}`;
