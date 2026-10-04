@@ -127,6 +127,7 @@ async function fetchChannelList(portalKey, url) {
 function normalizeChannelName(name) {
   return name
     .toUpperCase()
+    .replace(/\[.*?\]/g, '') // strip portal suffix like [DEBIT], [DINODOX]
     .replace(/[^A-Z0-9]/g, '') // remove special characters
     .replace(/(HEVC|FHD|HD|SD|UHD|4K|1080P|720P|BACKUP|ALT|DIRECT|RAW)/g, '') // strip quality tags
     .trim();
