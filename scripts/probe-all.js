@@ -170,26 +170,7 @@ async function probePortal(name, url) {
     result.error = `Channel fetch failed: ${e.message}`;
     result.status = 'error';
   }
-  
-  // Save detailed results as JSON for build-m3u.js to use
-  const statusData = {
-    lastUpdated: now,
-    portals: portals.map(p => ({
-      name: p.name,
-      url: p.url,
-      mac: p.mac,
-      lastProbe: p.lastProbe,
-      status: p.status,
-      expiry: p.expiry,
-      expiryDays: p.expiryDays,
-      channelCount: p.channelCount,
-      categoryCount: p.categoryCount
-    }))
-  };
-  
-  const statusPath = path.join(__dirname, '../portal-status.json');
-  fs.writeFileSync(statusPath, JSON.stringify(statusData, null, 2));
-  
+
   // Determine status
   if (result.channelCount > 0) {
     result.status = 'working';
@@ -204,14 +185,33 @@ async function probePortal(name, url) {
 
 async function main() {
   console.log('🔍 Probing all portals...\n');
-  
+
+  const entries = Object.entries(PROBE_URLS);
+  console.log(`Found ${entries.length} portals to probe`);
+
+  // Test first portal manually
+  const [testName, testUrl] = entries[0];
+  console.log(`\nTesting first portal: ${testName}`);
+  try {
+    const testResult = await probePortal(testName, testUrl);
+    console.log(`  Result: status=${testResult.status}, channels=${testResult.channelCount}, expiry=${testResult.expiryDays}d`);
+  } catch (e) {
+    console.error(`  Error:`, e.message);
+  }
+
   const results = await Promise.allSettled(
-    Object.entries(PROBE_URLS).map(([name, url]) => probePortal(name, url))
+    entries.map(([name, url]) => probePortal(name, url))
   );
-  
+
+  console.log(`\nProbed ${results.length} portals`);
+  console.log(`Fulfilled: ${results.filter(r => r.status === 'fulfilled').length}`);
+  console.log(`Rejected: ${results.filter(r => r.status === 'rejected').length}`);
+
   const portals = results
     .filter(r => r.status === 'fulfilled')
     .map(r => r.value);
+
+  console.log(`\nCollected ${portals.length} portal results`);
   
   // Sort by expiry days (soonest first)
   portals.sort((a, b) => {
@@ -314,6 +314,26 @@ async function main() {
   const reportPath = path.join(__dirname, '../PORTAL_STATUS.md');
   fs.writeFileSync(reportPath, md);
   console.log(`✅ Report saved to PORTAL_STATUS.md`);
+
+  // Save JSON status for build-m3u.js
+  const statusData = {
+    lastUpdated: new Date().toISOString(),
+    portals: portals.map(p => ({
+      name: p.name,
+      url: p.url,
+      mac: p.mac,
+      lastProbe: p.lastProbe,
+      status: p.status,
+      expiry: p.expiry,
+      expiryDays: p.expiryDays,
+      channelCount: p.channelCount,
+      categoryCount: p.categoryCount
+    }))
+  };
+
+  const statusPath = path.join(__dirname, '../portal-status.json');
+  fs.writeFileSync(statusPath, JSON.stringify(statusData, null, 2));
+  console.log(`✅ Status saved to portal-status.json`);
   
   // Also print summary to console
   console.log(`\n=== SUMMARY ===`);
