@@ -1,7 +1,16 @@
+# Dependencies
 node_modules/
-.mf/
-.mf2/
-.mf3/
-.wrangler/
+
+# Generated files
+playlist.m3u
+portal-status.json
+PORTAL_STATUS.md
+
+# Build output
+public/
+.DS_Store
+
+# Local test artifacts
 *.log
+.mf/
 *.clean.js

@@ -12,8 +12,16 @@ const path = require('path');
 // Load portal URLs from centralized config
 const { PROBE_URLS } = require('./portals.js');
 
+// Singapore/Malaysia specific markers from original anbox
+const SG_MARKERS = [
+  "SG ENTERTAINMENT", "SG ASIAN+", "SG MALAYSIA", "SG SPORTS+",
+  "SG INDIA+", "SG FILIPINO+", "MALAYSIA", "ASIA SPORTS",
+  "ASTRO", "STAR HUB", "SINGTEL"
+];
+
 const KEEP_CHANNELS = [
-  "UK SPORTS", "SPORTS", "BEIN SPORTS", "EPL", "SKY SPORTS", "SUPERSPORT", "NOW SPORTS"
+  "UK SPORTS", "SPORTS", "BEIN SPORTS", "EPL", "SKY SPORTS", "SUPERSPORT", "NOW SPORTS",
+  "UK ASTRO SPORTS", "UK NOW SPORTS", "UK HUB SPORTS", "UK WORLD SPORTS"
 ];
 
 const DEFAULT_MARKERS = [
@@ -22,12 +30,25 @@ const DEFAULT_MARKERS = [
 
 const customDomain = "https://anbox-iptv.kkhk.workers.dev";
 
+// Retry logic with exponential backoff
+async function fetchUrlWithRetry(url, options = {}, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fetchUrl(url, options);
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      // Wait before retry (exponential backoff)
+      await new Promise(r => setTimeout(r, Math.pow(2, i) * 500));
+    }
+  }
+}
+
 function fetchUrl(url, options = {}) {
   return new Promise((resolve, reject) => {
     const parsed = new URL(url);
     const isHttps = parsed.protocol === 'https:';
     const lib = isHttps ? https : http;
-    
+
     const reqOptions = {
       hostname: parsed.hostname,
       port: parsed.port || (isHttps ? 443 : 80),
@@ -36,19 +57,19 @@ function fetchUrl(url, options = {}) {
       headers: options.headers || {},
       timeout: options.timeout || 10000
     };
-    
+
     const req = lib.request(reqOptions, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve({ status: res.statusCode, data, ok: res.statusCode < 400 }));
     });
-    
+
     req.on('error', reject);
     req.on('timeout', () => {
       req.destroy();
       reject(new Error('Timeout'));
     });
-    
+
     req.end();
   });
 }
@@ -59,7 +80,7 @@ async function probePortal(url) {
     const mac = parsed.searchParams.get('mac');
     // Test portal.php instead of play/live.php
     const probeUrl = `${parsed.origin}/portal.php?type=itv&action=get_all_channels&JsHttpRequest=1-xml`;
-    const { status } = await fetchUrl(probeUrl, {
+    const { status } = await fetchUrlWithRetry(probeUrl, {
       headers: {
         'Cookie': `mac=${mac}`,
         'User-Agent': 'Mozilla/5.0 (QtEmbedded; U; Linux; MAG200 stb)'
@@ -76,20 +97,20 @@ async function fetchChannelList(portalKey, url) {
   try {
     const parsed = new URL(url);
     const apiUrl = `${parsed.origin}/portal.php?type=itv&action=get_all_channels&JsHttpRequest=1-xml`;
-    
-    const { status, data } = await fetchUrl(apiUrl, {
+
+    const { status, data } = await fetchUrlWithRetry(apiUrl, {
       headers: {
         Cookie: `mac=${parsed.searchParams.get('mac')}`,
         'User-Agent': 'Mozilla/5.0 (QtEmbedded; U; Linux; MAG200 stb)'
       },
       timeout: 15000
     });
-    
+
     if (status !== 200) return [];
-    
-    const jsonMatch = data.match(/\{.*\}/s);
+
+    const jsonMatch = data.match(/{.*}/s);
     if (!jsonMatch) return [];
-    
+
     const json = JSON.parse(jsonMatch[0]);
     return json.js?.data || [];
   } catch (e) {
@@ -106,6 +127,13 @@ function normalizeChannelName(name) {
     .replace(/[^A-Z0-9]/g, '') // remove special characters
     .replace(/(HEVC|FHD|HD|SD|UHD|4K|1080P|720P|BACKUP|ALT|DIRECT|RAW)/g, '') // strip quality tags
     .trim();
+}
+
+// Check if a channel is Singapore/Malaysia related
+function isSGChannel(name, groupTitle) {
+  const combined = (name + ' ' + groupTitle).toUpperCase();
+  return SG_MARKERS.some(m => combined.includes(m.toUpperCase())) ||
+         /SG |SINGAPORE|MALAYSIA|MALAY|ASTRO|STAR HUB|SINGTEL/i.test(combined);
 }
 
 async function buildM3U() {
@@ -151,46 +179,61 @@ async function buildM3U() {
       return { name, url, ok };
     })
   );
-  
+
   const workingPortals = results
     .filter(r => r.status === 'fulfilled' && r.value.ok)
     .map(r => r.value);
-  
+
   console.log(`✅ Found ${workingPortals.length}/${Object.keys(PROBE_URLS).length} working portals`);
   console.log('Working:', workingPortals.map(p => p.name).join(', '));
-  
-  const channelMap = new Map(); // key: normalized name, value: array of channel objects
 
-  for (const portal of workingPortals) {
-    console.log(`📥 Fetching channels from ${portal.name}...`);
-    const channels = await fetchChannelList(portal.name, portal.url);
-    
+  // Fetch channels from all portals in parallel with retry
+  console.log('\n📥 Fetching channels from all portals in parallel...');
+  const fetchResults = await Promise.allSettled(
+    workingPortals.map(async (portal) => {
+      console.log(`  📥 ${portal.name}...`);
+      const channels = await fetchChannelList(portal.name, portal.url);
+      return { name: portal.name, url: portal.url, channels, ok: true };
+    })
+  );
+
+  const allPortals = fetchResults
+    .filter(r => r.status === 'fulfilled' && r.value.ok)
+    .map(r => r.value);
+
+  console.log(`\n✅ Fetched from ${allPortals.length}/${workingPortals.length} portals`);
+
+  const channelMap = new Map();
+  const sgChannels = new Map();
+
+  for (const portal of allPortals) {
     const parsed = new URL(portal.url);
     const portalBase = parsed.origin;
     const mac = parsed.searchParams.get('mac');
-    
+    const channels = portal.channels;
+
     let currentMarker = null;
-    
+
     for (const ch of channels) {
       const name = (ch.name || '').trim();
-      
+
       // Skip markers
       if (/^#{3,}.+#{3,}$/i.test(name)) {
         currentMarker = name.replace(/#/g, '').trim();
         continue;
       }
-      
+
       // Extract fresh token from channel's cmd field (ffmpeg URL)
       const cmd = ch.cmd || '';
       let token = mac; // fallback to mac if no token found
-      
+
       // Try to extract play_token from cmd
       const tokenMatch = cmd.match(/play_token=([A-Za-z0-9]+)/);
       if (tokenMatch) {
         token = tokenMatch[1];
       } else {
         // Try to extract full stream URL from cmd
-        const urlMatch = cmd.match(/(https?:\/\/[^\\s"']+)/);
+        const urlMatch = cmd.match(/(https?:\/\/[^\s"'])+/);
         if (urlMatch) {
           try {
             const urlObj = new URL(urlMatch[1]);
@@ -198,41 +241,52 @@ async function buildM3U() {
           } catch {}
         }
       }
-      
+
       const realUrl = `${portalBase}/play/live.php?mac=${mac}&stream=${ch.id}&extension=ts&play_token=${token}`;
-      
-      let groupTitle = '';
-      let shouldInclude = false;
-      
+
+      let groupTitle = currentMarker || 'Other';
+      let shouldInclude = true;
+
       if (KEEP_CHANNELS.some(k => name.toUpperCase().includes(k.toUpperCase()))) {
         groupTitle = 'Sports On Demand';
-        shouldInclude = true;
       } else if (currentMarker && DEFAULT_MARKERS.some(m => m.toUpperCase() === currentMarker.toUpperCase())) {
-   groupTitle = currentMarker;
-   shouldInclude = true;
- } else if (!groupTitle) {
-   // Include all channels if no marker matches
-   groupTitle = 'Other';
-   shouldInclude = true;
- }
-      
+        groupTitle = currentMarker;
+      } else if (!groupTitle) {
+        groupTitle = 'Other';
+      }
+
       if (!shouldInclude) continue;
 
       const normName = normalizeChannelName(name);
-      if (!channelMap.has(normName)) {
-        channelMap.set(normName, []);
+
+      // Check if Singapore/Malaysia channel
+      if (isSGChannel(name, groupTitle)) {
+        if (!sgChannels.has(normName)) {
+          sgChannels.set(normName, []);
+        }
+        sgChannels.get(normName).push({
+          id: ch.id,
+          name: name,
+          groupTitle: groupTitle,
+          url: realUrl,
+          portal: portal.name
+        });
+      } else {
+        if (!channelMap.has(normName)) {
+          channelMap.set(normName, []);
+        }
+        channelMap.get(normName).push({
+          id: ch.id,
+          name: name,
+          groupTitle: groupTitle,
+          url: realUrl,
+          portal: portal.name
+        });
       }
-      channelMap.get(normName).push({
-        id: ch.id,
-        name: name,
-        groupTitle: groupTitle,
-        url: realUrl,
-        portal: portal.name
-      });
     }
   }
 
-  // Generate M3U playlist with grouped/deduplicated channels
+  // Generate M3U playlist with SG channels first
   let m3u = '#EXTM3U\n';
   m3u += `#Generated: ${new Date().toISOString()}\n`;
   m3u += `#Active Sources: ${workingPortals.map(p => p.name.toUpperCase()).join(' & ')}\n\n`;
@@ -240,28 +294,61 @@ async function buildM3U() {
   let totalChannels = 0;
   const seenUrls = new Set();
 
-  for (const [normName, list] of channelMap.entries()) {
-    // Get unique portals for this channel
-    const portals = [...new Set(list.map(ch => ch.portal))];
-    const mainCh = list[0];
+  // Helper to format channel entry
+  function formatChannel(entry) {
+    const portals = [...new Set(entry.list.map(ch => ch.portal))];
+    const mainCh = entry.list[0];
     const b64Url = Buffer.from(mainCh.url).toString('base64');
     const streamUrl = `${customDomain}/resolve?src=${encodeURIComponent(b64Url)}`;
 
-    // Skip exact URL duplicates
-    if (seenUrls.has(mainCh.url)) continue;
+    if (seenUrls.has(mainCh.url)) return null;
     seenUrls.add(mainCh.url);
 
-    // Create channel name with all portal sources
     const portalSuffix = portals.length > 1 ? ` [${portals.join(', ')}]` : ` [${portals[0]}]`;
     const displayName = `${mainCh.name}${portalSuffix}`;
 
-    m3u += `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${displayName}" group-title="${mainCh.groupTitle}",${displayName}\n`;
-    m3u += `${streamUrl}\n`;
-    totalChannels++;
+    return {
+      header: `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${displayName}" group-title="${mainCh.groupTitle}",${displayName}\n`,
+      url: streamUrl
+    };
   }
 
-  console.log(`📊 Total unique channels: ${totalChannels}`);
-  
+  // Add SG channels first
+  console.log('\n🇸🇬 Processing SG/MY channels...');
+  const sgEntries = [];
+  for (const [normName, list] of sgChannels.entries()) {
+    const entry = formatChannel({ list });
+    if (entry) {
+      sgEntries.push(entry);
+      totalChannels++;
+    }
+  }
+  m3u += '# === SINGAPORE / MALAYSIA CHANNELS ===\n\n';
+  for (const entry of sgEntries) {
+    m3u += entry.header;
+    m3u += entry.url + '\n';
+  }
+  console.log(`  Found ${sgEntries.length} SG/MY channels`);
+
+  // Add remaining channels
+  console.log('\n🌍 Processing international channels...');
+  const intlEntries = [];
+  for (const [normName, list] of channelMap.entries()) {
+    const entry = formatChannel({ list });
+    if (entry) {
+      intlEntries.push(entry);
+      totalChannels++;
+    }
+  }
+  m3u += '# === INTERNATIONAL CHANNELS ===\n\n';
+  for (const entry of intlEntries) {
+    m3u += entry.header;
+    m3u += entry.url + '\n';
+  }
+  console.log(`  Found ${intlEntries.length} international channels`);
+
+  console.log(`\n📊 Total unique channels: ${totalChannels}`);
+
   return m3u;
 }
 
@@ -272,7 +359,7 @@ async function main() {
     fs.writeFileSync(outputPath, m3u);
     console.log(`✅ Playlist written to ${outputPath}`);
     console.log(`📊 Total size: ${(m3u.length / 1024).toFixed(2)} KB`);
-    
+
   } catch (error) {
     console.error('❌ Error:', error);
     process.exit(1);

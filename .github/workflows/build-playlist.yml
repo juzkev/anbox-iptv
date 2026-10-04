@@ -2,7 +2,7 @@ name: Build IPTV Playlist
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 */2 * * *'  # Every 2 hours
   workflow_dispatch:
 
 jobs:
@@ -20,9 +20,28 @@ jobs:
           node-version: '20'
       
       - name: Install dependencies
-        run: npm ci
-      
+        run: npm ci --prefer-offline
+
+      - name: Check if build needed
+        id: check
+        run: |
+          if [ -f "playlist.m3u" ]; then
+            AGE=$(( $(date +%s) - $(stat -c %Y playlist.m3u) ))
+            # Skip if less than 2.5 hours old (allowing for 2hr schedule + buffer)
+            if [ $AGE -lt 9000 ]; then
+              echo "Skipping: playlist is only $((AGE/60/60)) hours old"
+              echo "skip=true" >> $GITHUB_OUTPUT
+            else
+              echo "Building: playlist is $((AGE/60/60)) hours old"
+              echo "skip=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "Building: no playlist found"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build playlist
+        if: steps.check.outputs.skip != 'true'
         run: node scripts/build-m3u.js
       
       - name: Commit and push if changed
@@ -31,6 +50,34 @@ jobs:
         run: |
           git config user.name "juzkev"
           git config user.email "juzkev@gmail.com"
-          git add playlist.m3u
+          git add playlist.m3u portal-status.json
           git diff --cached --quiet || git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S')"
           git push https://x-access-token:$GH_PAT@github.com/juzkev/anbox-iptv.git main
+
+  pages:
+    needs: build
+    if: always() && needs.build.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  report:
+    needs: [build, pages]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Report status
+        run: |
+          echo "Build: ${{ needs.build.result }}"
+          echo "Pages: ${{ needs.pages.result }}"
+          echo "Playlist: https://juzkev.github.io/anbox-iptv/playlist.m3u"
