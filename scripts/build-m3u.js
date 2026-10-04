@@ -81,14 +81,17 @@ function fetchUrl(url, options = {}) {
 async function probePortal(url) {
   try {
     const parsed = new URL(url);
-    const { status } = await fetchUrl(url, { 
-      headers: { 
-        Cookie: `mac=${parsed.searchParams.get('mac')}`,
+    const mac = parsed.searchParams.get('mac');
+    // Test portal.php instead of play/live.php
+    const probeUrl = `${parsed.origin}/portal.php?type=itv&action=get_all_channels&JsHttpRequest=1-xml`;
+    const { status } = await fetchUrl(probeUrl, {
+      headers: {
+        'Cookie': `mac=${mac}`,
         'User-Agent': 'Mozilla/5.0 (QtEmbedded; U; Linux; MAG200 stb)'
       },
-      timeout: 3000
+      timeout: 5000
     });
-    return [200, 206, 302].includes(status);
+    return status === 200;
   } catch {
     return false;
   }
