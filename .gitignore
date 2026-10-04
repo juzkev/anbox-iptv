@@ -2,7 +2,6 @@
 node_modules/
 
 # Generated files (NOT committed - served directly from GitHub Pages)
-playlist.m3u
 portal-status.json
 PORTAL_STATUS.md
 
