@@ -181,9 +181,13 @@ async function buildM3U() {
         groupTitle = 'Sports On Demand';
         shouldInclude = true;
       } else if (currentMarker && DEFAULT_MARKERS.some(m => m.toUpperCase() === currentMarker.toUpperCase())) {
-        groupTitle = currentMarker;
-        shouldInclude = true;
-      }
+   groupTitle = currentMarker;
+   shouldInclude = true;
+ } else if (!groupTitle) {
+   // Include all channels if no marker matches
+   groupTitle = 'Other';
+   shouldInclude = true;
+ }
       
       if (!shouldInclude) continue;
 
