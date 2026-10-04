@@ -5,18 +5,6 @@
 #EXTINF:-1 tvg-name="Animax HD",Animax HD
 http://tv123.cc.cd/live.php?ch=1030&sid=c41173e79f1de756986434cafd22bf86&exp=1791162839&sig=edb579e6633d0a6e53585ceac10f33a05324945596009d19e2d3ec7dcb962588
 
-#EXTINF:-1 tvg-name="ID - ANIMAX",ID - ANIMAX
-http://sbhgoldpro.org/play/live.php?mac=00:1A:79:70:88:83&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://dinofox.sbs/play/live.php?mac=00:1A:79:00:23:D6&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://dinomultiservice.online/play/live.php?mac=00:1A:79:b3:e7:5e&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://mag.dino.ws/play/live.php?mac=00:1A:79:77:DA:73&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://mag.dino.ws/play/live.php?mac=00:1A:79:B6:E4:DA&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://skunkytv.live/play/live.php?mac=00:1A:79:B6:F3:A5&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://skunkytv.live/play/live.php?mac=00:1A:79:B6:F3:A5&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://skunkytv.live/play/live.php?mac=00:1A:79:26:60:78&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://dsmax.xyz/play/live.php?mac=00:1A:79:7b:4f:9e&stream=704484&extension=ts&play_token=9vTKznZvqN
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=704484&extension=ts&play_token=9vTKznZvqN
-
 #EXTINF:-1 tvg-name="EN| ONEPLAY ANIME info ᴴᴰ",EN| ONEPLAY ANIME info ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916793&extension=ts&play_token=ifStjMQPiT
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916793&extension=ts&play_token=ifStjMQPiT
@@ -85,9 +73,4 @@ http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916781&ext
 #EXTINF:-1 tvg-name="V+| ANIMAX",V+| ANIMAX
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1919480&extension=ts&play_token=zWHVVosL8U
 
-#EXTINF:-1 tvg-name="JP| ANIMAX",JP| ANIMAX
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1432230&extension=ts&play_token=JAMUHQvKyy
-
-#EXTINF:-1 tvg-name="PH|ANIMAX",PH|ANIMAX
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=2033833&extension=ts&play_token=LhxvDLh5AE
 
