@@ -952,6 +952,13 @@ async function main() {
     console.log(`✅ Playlist written to ${outputPath}`);
     console.log(`📊 Total size: ${(m3u.length / 1024).toFixed(2)} KB`);
 
+    // Generate anime-only playlist
+    const animeM3u = buildAnimePlaylist(m3u);
+    const animePath = path.join(__dirname, '..', 'anime-all.m3u');
+    fs.writeFileSync(animePath, animeM3u);
+    console.log(`✅ Anime playlist written to ${animePath}`);
+    console.log(`📊 Anime channels: ${(animeM3u.match(/#EXTINF/g) || []).length}`);
+
   } catch (error) {
     console.error('❌ Error:', error);
     process.exit(1);
