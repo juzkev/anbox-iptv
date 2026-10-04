@@ -13,10 +13,20 @@ const path = require('path');
 const { PROBE_URLS } = require('./portals.js');
 
 // Singapore/Malaysia specific markers from original anbox
+// Use word boundaries to avoid false positives (e.g., BARBASTRO, SG=handball teams)
 const SG_MARKERS = [
-  "SG ENTERTAINMENT", "SG ASIAN+", "SG MALAYSIA", "SG SPORTS+",
-  "SG INDIA+", "SG FILIPINO+", "MALAYSIA", "ASIA SPORTS",
-  "ASTRO", "STAR HUB", "SINGTEL"
+  /\bSG ENTERTAINMENT\b/,
+  /\bSG ASIAN\b/,
+  /\bSG MALAYSIA\b/,
+  /\bSG SPORTS\b/,
+  /\bSG INDIA\b/,
+  /\bSG FILIPINO\b/,
+  /\bMALAYSIA\b/,
+  /\bASIA SPORTS\b/,
+  /\bASTRO\b/,  // Match standalone ASTRO (not BARBASTRO)
+  /\bSTAR HUB\b/,
+  /\bSINGTEL\b/,
+  /\bSINGAPORE\b/
 ];
 
 const KEEP_CHANNELS = [
@@ -129,11 +139,26 @@ function normalizeChannelName(name) {
     .trim();
 }
 
-// Check if a channel is Singapore/Malaysia related
+// Check if a channel is Singapore/Malaysia related (for sorting)
 function isSGChannel(name, groupTitle) {
   const combined = (name + ' ' + groupTitle).toUpperCase();
-  return SG_MARKERS.some(m => combined.includes(m.toUpperCase())) ||
-         /SG |SINGAPORE|MALAYSIA|MALAY|ASTRO|STAR HUB|SINGTEL/i.test(combined);
+  // Exclude UK channels to avoid false positives
+  if (/^UK\s*-\s*/.test(name)) return false;
+
+  // Match the original script's approach: check group-title and name
+  return /\bSG\s+ENTERTAINMENT\b/.test(combined) ||
+         /\bSG\s+ASIAN\b/.test(combined) ||
+         /\bSG\s+MALAYSIA\b/.test(combined) ||
+         /\bSG\s+SPORTS\b/.test(combined) ||
+         /\bSG\s+INDIA\b/.test(combined) ||
+         /\bSG\s+FILIPINO\b/.test(combined) ||
+         /\bMALAYSIA\b/.test(combined) ||
+         /\bASIA\s+SPORTS\b/.test(combined) ||
+         // Only match ASTRO if it's in the group-title or at the start of the name (not "PSL - ASTRO" or "CR - ASTRO")
+         (/\bASTRO\b/.test(groupTitle.toUpperCase()) && !/^\s*(PSL|CR)\s*-/.test(name)) ||
+         /\bSTAR\s+HUB\b/.test(combined) ||
+         /\bSINGTEL\b/.test(combined) ||
+         /\bSINGAPORE\b/.test(combined);
 }
 
 async function buildM3U() {
