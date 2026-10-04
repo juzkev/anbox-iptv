@@ -144,13 +144,13 @@ function isPPVChannel(name, groupTitle) {
   const combined = (name + ' ' + groupTitle).toUpperCase();
   // Exclude PPV channels
   if (/\bPPV\b/.test(combined)) return true;
-  // Exclude temporary event channels with dates
-  if (/^(END|NEXT)\s*\|/.test(name)) return true;
-  if (/^ENDED\s*\|/.test(name)) return true;
+  // Exclude temporary event channels with dates (various formats)
+  if (/^(END|NEXT|ENDED)\s*\|/.test(name)) return true;
+  // Exclude channels with timestamps like (2026-10-09 or Oct 09)
+  if (/\(\d{4}-\d{2}-\d{2}/.test(name) || /\(\d{2}-\d{2}-\d{4}/.test(name)) return true;
+  if (/\b\d{2}-\d{2}-\d{4}\b/.test(name)) return true;
   // Exclude "8K EXCLUSIVE" type channels
   if (/\b8K\s+EXCLUSIVE\b/.test(combined)) return true;
-  // Exclude channels with specific event dates
-  if (/\d{2}-\d{2}-\d{4}\b/.test(name)) return true;
   return false;
 }
 
