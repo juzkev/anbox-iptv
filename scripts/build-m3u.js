@@ -875,7 +875,7 @@ function buildAnimePlaylist(m3u) {
       let cleanName = name;
       const nameMatch = cleanName.match(/(EN\| ONEPLAY ANIME[^\]]+)/);
       if (nameMatch) {
-        cleanName = nameMatch[1].replace(/\s+/g, ' ');
+        cleanName = nameMatch[1].split(' [')[0].trim();
       } else {
         cleanName = cleanName.replace(/\[[^]]+\]/g, '').trim();
       }
