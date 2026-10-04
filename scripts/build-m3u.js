@@ -212,11 +212,11 @@ async function buildM3U() {
   m3u += `#Active Sources: ${workingPortals.map(p => p.name.toUpperCase()).join(' & ')}\n\n`;
 
   let totalChannels = 0;
-  let alternateStreams = 0;
   const seenUrls = new Set();
 
   for (const [normName, list] of channelMap.entries()) {
-    // Keep the first channel as main
+    // Get unique portals for this channel
+    const portals = [...new Set(list.map(ch => ch.portal))];
     const mainCh = list[0];
     const b64Url = Buffer.from(mainCh.url).toString('base64');
     const streamUrl = `${customDomain}/resolve?src=${encodeURIComponent(b64Url)}`;
@@ -225,30 +225,16 @@ async function buildM3U() {
     if (seenUrls.has(mainCh.url)) continue;
     seenUrls.add(mainCh.url);
 
-    m3u += `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${mainCh.name} [${mainCh.portal.toUpperCase()}]" group-title="${mainCh.groupTitle}",${mainCh.name} [${mainCh.portal.toUpperCase()}]\n`;
+    // Create channel name with all portal sources
+    const portalSuffix = portals.length > 1 ? ` [${portals.join(', ')}]` : ` [${portals[0]}]`;
+    const displayName = `${mainCh.name}${portalSuffix}`;
+
+    m3u += `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${displayName}" group-title="${mainCh.groupTitle}",${displayName}\n`;
     m3u += `${streamUrl}\n`;
     totalChannels++;
-
-    // Add alternate streams (max 2 per channel to keep file small)
-    const maxAlts = 2;
-    if (list.length > 1) {
-      for (let i = 1; i < list.length && i <= maxAlts; i++) {
-        const altCh = list[i];
-        // Skip URL duplicates
-        if (seenUrls.has(altCh.url)) continue;
-        seenUrls.add(altCh.url);
-        
-        const altB64Url = Buffer.from(altCh.url).toString('base64');
-        const altStreamUrl = `${customDomain}/resolve?src=${encodeURIComponent(altB64Url)}`;
-        
-        m3u += `#EXTINF:-1 tvg-id="${altCh.id}" tvg-name="${altCh.name} [${altCh.portal.toUpperCase()}]" group-title="${altCh.groupTitle}",${altCh.name} [${altCh.portal.toUpperCase()}]\n`;
-        m3u += `${altStreamUrl}\n`;
-        alternateStreams++;
-      }
-    }
   }
-  
-  console.log(`📊 Total channels: ${totalChannels} (plus ${alternateStreams} alternative streams)`);
+
+  console.log(`📊 Total unique channels: ${totalChannels}`);
   
   return m3u;
 }
