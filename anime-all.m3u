@@ -1,6 +1,7 @@
 #EXTM3U
-#Generated: 2026-10-04T12:14:17.829Z
+#Generated: 2026-10-04T12:16:02.956Z
 #Anime Channels (Fallback Links)
+
 
 #EXTINF:-1 tvg-id="stream-fbcc49b7-75a6-456c-a7bf-6b6300597e50" tvg-name="Animax HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/532_1920x1080_HTV.png" group-title="🤠國際體育",Animax HD
 http://tv123.cc.cd/live.php?ch=1030&sid=d01fd165d48dff7e44d9a40ebb5b225c&exp=1791144287&sig=8439655cb410b7e9bd8a9a11a2f6e6930e76795230acbfde451df2d6b0d09fb5
@@ -38,14 +39,6 @@ http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1014234&extension=ts&p
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1014234&extension=ts&play_token=76PrUQlzzX
 #EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Kids",UK| CARTOON NETWORK +1 [godofiptv]",trxx, iptvgoat, godofiptv]" group-title="Kids",UK| CARTOON NETWORK +1 [godofiptv]
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1014234&extension=ts&play_token=76PrUQlzzX
-#EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [greatott]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [greatott]
-http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1569746&extension=ts&play_token=KvoN1vEVXe
-#EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [trxx]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [trxx]
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1569746&extension=ts&play_token=KvoN1vEVXe
-#EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [iptvgoat]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [iptvgoat]
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1569746&extension=ts&play_token=KvoN1vEVXe
-#EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [godofiptv]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",EN| ANIME TV [godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1569746&extension=ts&play_token=KvoN1vEVXe
 #EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",UK-NOWTV| CARTOON NETWORK FHD [greatott]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",UK-NOWTV| CARTOON NETWORK FHD [greatott]
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=1905951&extension=ts&play_token=FhW9CDxdnK
 #EXTINF:-1 tvg-name="trxx, iptvgoat, godofiptv]" group-title="Entertainment",UK-NOWTV| CARTOON NETWORK FHD [trxx]",trxx, iptvgoat, godofiptv]" group-title="Entertainment",UK-NOWTV| CARTOON NETWORK FHD [trxx]
@@ -362,3 +355,4 @@ http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1432230&ext
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=2033849&extension=ts&play_token=FJASUBhz5b
 #EXTINF:-1 tvg-name="PH|ANIMAX [godofiptv]",PH|ANIMAX [godofiptv]
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=2033833&extension=ts&play_token=5E2pwsUtUB
+
