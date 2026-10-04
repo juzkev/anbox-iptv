@@ -9,33 +9,8 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const PROBE_URLS = {
-  debit: "http://debitmaxi.com:80/play/live.php?mac=00:1A:79:ca:e9:38&stream=1284583&extension=ts&play_token=2D7gUe5rZJ",
-  dinodox: "http://dinodox.sbs:80/play/live.php?mac=00:1A:79:00:00:1D&stream=1284583&extension=ts&play_token=RR9gyGnK3x",
-  dinofox: "http://dinofox.sbs:80/play/live.php?mac=00:1A:79:00:23:D6&stream=1284583&extension=ts&play_token=7FKXZsY1xS",
-  dinomultiservice: "http://dinomultiservice.online:80/play/live.php?mac=00:1A:79:b3:e7:5e&stream=1284583&extension=ts&play_token=ugvC90VaUk",
-  dsmax: "http://dsmax.xyz:80/play/live.php?mac=00:1A:79:7b:4f:9e&stream=1284583&extension=ts&play_token=bdApNj3w3H",
-  iptvgoat: "http://line.iptvgoat.com:80/play/live.php?mac=00:1A:79:24:7A:C0&stream=2162327&extension=ts&play_token=9WlD9ZdX2S",
-  mag_dino1: "http://mag.dino.ws:80/play/live.php?mac=00:1A:79:B6:E4:7E&stream=1066883&extension=ts&play_token=mbOkoENcPC",
-  mag_dino2: "http://mag.dino.ws:80/play/live.php?mac=00:1A:79:B6:E4:DA&stream=924940&extension=ts&play_token=MfyRLX2RWW",
-  greatott: "http://mag.greatott.me:80/play/live.php?mac=00:1A:79:D0:99:A1&stream=73276&extension=ts&play_token=sYuaUWC1f6",
-  cwdn: "http://main2.cwdn.cx:80/play/live.php?mac=00:1A:79:73:E6:4C&stream=758665&extension=ts&play_token=yDDkqlq27F",
-  mlnldino1: "http://mlnldino.xyz:80/play/live.php?mac=00:1A:79:5e:f2:49&stream=1066883&extension=ts&play_token=I90VMJRy1e",
-  mlnldino2: "http://mlnldino.xyz:80/play/live.php?mac=00:1A:79:e7:58:87&stream=767638&extension=ts&play_token=MC1EG8QBaM",
-  sbh1: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:D0:80:82&stream=1410044&extension=ts&play_token=TUXTlgrFBK",
-  sbh2: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:62:33:32&stream=802545&extension=ts&play_token=MkTGweu60I",
-  sbh3: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:B6:C7:AD&stream=1410044&extension=ts&play_token=XDB7Nsqgaw",
-  sbh4: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:70:88:83&stream=1284583&extension=ts&play_token=MTVGgvYUj7",
-  sbh5: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:00:1F:6F&stream=1284583&extension=ts&play_token=AIMP2AAAm0",
-  sbh6: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:84:0A:31&stream=758665&extension=ts&play_token=V7TOi9db6g",
-  sbh7: "http://sbhgoldpro.org:80/play/live.php?mac=00:1A:79:6d:e3:f2&stream=763386&extension=ts&play_token=aHFsuCcI4o",
-  skunky1: "http://skunkytv.live:80/play/live.php?mac=00:1A:79:68:89:7F&stream=1284583&extension=ts&play_token=B31flZxa9H",
-  skunky2: "http://skunkytv.live:80/play/live.php?mac=00:1A:79:B6:F3:A5&stream=1284583&extension=ts&play_token=LHqwUFkJP7",
-  skunky3: "http://skunkytv.live:80/play/live.php?mac=00:1A:79:41:1B:0F&stream=627033&extension=ts&play_token=SiUBbPS661",
-  skunky4: "http://skunkytv.live:80/play/live.php?mac=00:1A:79:26:60:78&stream=1284583&extension=ts&play_token=fmgIu86xhm",
-  suiptv: "http://suiptv265.xyz:80/play/live.php?mac=00:1A:79:73:A6:5D&stream=765924&extension=ts&play_token=tF51YhbinX",
-  trxx: "http://trxx.in:80/play/live.php?mac=00:1A:79:00:00:5A&stream=2162327&extension=ts&play_token=SZPp1UJaOs"
-};
+// Load portal URLs from centralized config
+const { PROBE_URLS } = require('./portals.js');
 
 const KEEP_CHANNELS = [
   "UK SPORTS", "SPORTS", "BEIN SPORTS", "EPL", "SKY SPORTS", "SUPERSPORT", "NOW SPORTS"
