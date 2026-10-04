@@ -60,32 +60,54 @@ async function fetchUrlWithRetry(url, options = {}, retries = 3) {
 
 function fetchUrl(url, options = {}) {
   return new Promise((resolve, reject) => {
-    const parsed = new URL(url);
-    const isHttps = parsed.protocol === 'https:';
-    const lib = isHttps ? https : http;
+    let currentUrl = url;
+    let redirectCount = 0;
+    const maxRedirects = 5;
 
-    const reqOptions = {
-      hostname: parsed.hostname,
-      port: parsed.port || (isHttps ? 443 : 80),
-      path: parsed.pathname + parsed.search,
-      method: 'GET',
-      headers: options.headers || {},
-      timeout: options.timeout || 10000
-    };
+    function doFetch(url, redirectOptions) {
+      const parsed = new URL(url);
+      const isHttps = parsed.protocol === 'https:';
+      const lib = isHttps ? https : http;
 
-    const req = lib.request(reqOptions, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => resolve({ status: res.statusCode, data, ok: res.statusCode < 400 }));
-    });
+      const reqOptions = {
+        hostname: parsed.hostname,
+        port: parsed.port || (isHttps ? 443 : 80),
+        path: parsed.pathname + parsed.search,
+        method: 'GET',
+        headers: options.headers || {},
+        timeout: options.timeout || 10000
+      };
 
-    req.on('error', reject);
-    req.on('timeout', () => {
-      req.destroy();
-      reject(new Error('Timeout'));
-    });
+      const req = lib.request(reqOptions, (res) => {
+        // Handle redirects
+        if (options.followRedirects && [301, 302, 303, 307, 308].includes(res.statusCode)) {
+          if (redirectCount >= maxRedirects) {
+            return reject(new Error('Too many redirects'));
+          }
+          const location = res.headers.location;
+          if (location) {
+            redirectCount++;
+            // Resolve relative URLs
+            const nextUrl = location.startsWith('http') ? location : `${parsed.protocol}//${parsed.host}${location}`;
+            return doFetch(nextUrl, options);
+          }
+        }
 
-    req.end();
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => resolve({ status: res.statusCode, data }));
+      });
+
+      req.on('error', reject);
+      req.on('timeout', () => {
+        req.destroy();
+        reject(new Error('Timeout'));
+      });
+
+      req.end();
+    }
+
+    doFetch(url, options);
   });
 }
 
@@ -674,6 +696,23 @@ async function buildM3U() {
   m3u += `#Generated: ${new Date().toISOString()}\n`;
   m3u += `#Active Sources: ${workingPortals.map(p => p.name.toUpperCase()).join(' & ')}\n\n`;
 
+  // Fetch and prepend external playlists (virtualized URLs)
+  console.log('\n📡 Fetching external playlists...');
+  for (const extUrl of EXTERNAL_PLAYLISTS) {
+    try {
+      const extM3u = await fetchExternalPlaylist(extUrl);
+      if (extM3u) {
+        m3u += extM3u;
+        console.log(`  ✅ Added ${extUrl}`);
+      } else {
+        console.log(`  ⚠️  Skipped ${extUrl} (failed or empty)`);
+      }
+    } catch (e) {
+      console.log(`  ❌ Error fetching ${extUrl}: ${e.message}`);
+    }
+  }
+  m3u += '\n';
+
   let totalChannels = 0;
   const seenUrls = new Set();
 
@@ -746,7 +785,7 @@ async function buildM3U() {
   async function fetchExternalPlaylist(url) {
     try {
       console.log(`  📥 Fetching ${url}...`);
-      const { status, data } = await fetchUrlWithRetry(url, { timeout: 15000 });
+      const { status, data } = await fetchUrlWithRetry(url, { timeout: 15000, followRedirects: true });
       if (status !== 200 || !data) return null;
     
       // Parse and virtualize each line
