@@ -1,9 +1,22 @@
 #EXTM3U
-#Generated: 2026-10-04T12:52:00.332Z
+#Generated: 2026-10-04T12:53:08.692Z
 #Anime Channels (Fallback URLs)
 
 #EXTINF:-1 tvg-id="stream-fbcc49b7-75a6-456c-a7bf-6b6300597e50" tvg-name="Animax HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/532_1920x1080_HTV.png" group-title="🤠國際體育",Animax HD
 http://tv123.cc.cd/live.php?ch=1030&sid=d01fd165d48dff7e44d9a40ebb5b225c&exp=1791144287&sig=8439655cb410b7e9bd8a9a11a2f6e6930e76795230acbfde451df2d6b0d09fb5
+
+#EXTINF:-1 tvg-name="sbhgoldpro5, debit, dinofox2, dino3, dino4, dino5, skunky3, skunky4, skunkytv, godofiptv]" group-title="Kids",ID - ANIMAX",sbhgoldpro5, debit, dinofox2, dino3, dino4, dino5, skunky3, skunky4, skunkytv, godofiptv]" group-title="Kids",ID - ANIMAX
+http://sbhgoldpro.org/play/live.php?mac=00:1A:79:D0:80:82&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://sbhgoldpro.org/play/live.php?mac=00:1A:79:70:88:83&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://debitmaxi.com/play/live.php?mac=00:1A:79:ca:e9:38&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://dinofox.sbs/play/live.php?mac=00:1A:79:f5:81:14&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://mag.dino.ws/play/live.php?mac=00:1A:79:77:DA:73&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://mag.dino.ws/play/live.php?mac=00:1A:79:B6:E4:DA&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://mag.dino.ws/play/live.php?mac=00:1A:79:B6:E4:7E&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://skunkytv.live/play/live.php?mac=00:1A:79:B6:F3:A5&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://skunkytv.live/play/live.php?mac=00:1A:79:B6:F3:A5&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://skunkytv.live/play/live.php?mac=00:1A:79:26:60:78&stream=704484&extension=ts&play_token=jegXuVKcUZ
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=704484&extension=ts&play_token=jegXuVKcUZ
 
 #EXTINF:-1 tvg-name="V+| ANIMAX",V+| ANIMAX
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1919480&extension=ts&play_token=6E6QXOelwh
