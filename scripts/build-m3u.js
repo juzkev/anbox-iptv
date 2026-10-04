@@ -139,6 +139,21 @@ function normalizeChannelName(name) {
     .trim();
 }
 
+// Check if a channel is PPV/temporary event (should be excluded)
+function isPPVChannel(name, groupTitle) {
+  const combined = (name + ' ' + groupTitle).toUpperCase();
+  // Exclude PPV channels
+  if (/\bPPV\b/.test(combined)) return true;
+  // Exclude temporary event channels with dates
+  if (/^(END|NEXT)\s*\|/.test(name)) return true;
+  if (/^ENDED\s*\|/.test(name)) return true;
+  // Exclude "8K EXCLUSIVE" type channels
+  if (/\b8K\s+EXCLUSIVE\b/.test(combined)) return true;
+  // Exclude channels with specific event dates
+  if (/\d{2}-\d{2}-\d{4}\b/.test(name)) return true;
+  return false;
+}
+
 // Check if a channel is Singapore/Malaysia related (for sorting)
 function isSGChannel(name, groupTitle) {
   const combined = (name + ' ' + groupTitle).toUpperCase();
@@ -282,6 +297,9 @@ async function buildM3U() {
       }
 
       if (!shouldInclude) continue;
+
+      // Skip PPV/temporary event channels
+      if (isPPVChannel(name, groupTitle)) continue;
 
       const normName = normalizeChannelName(name);
 
