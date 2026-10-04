@@ -682,8 +682,15 @@ async function buildM3U() {
     if (seenUrls.has(mainCh.url)) return null;
     seenUrls.add(mainCh.url);
 
+    // Sanitize the original name - fix unbalanced brackets
+    let sanitizedName = mainCh.name
+      .replace(/\[[^[\]]*\)/g, match => match.replace(')', ']')) // Fix ) to ] in brackets
+      .replace(/\([^)]*\]/g, match => match.replace('[', '(')); // Fix [ to ( in parens
+    // Remove any trailing brackets that might cause issues
+    sanitizedName = sanitizedName.trim();
+
     const portalSuffix = portals.length > 1 ? ` [${portals.join(', ')}]` : ` [${portals[0]}]`;
-    const displayName = `${mainCh.name}${portalSuffix}`;
+    const displayName = `${sanitizedName}${portalSuffix}`;
 
     return {
       header: `#EXTINF:-1 tvg-id="${mainCh.id}" tvg-name="${displayName}" group-title="${normalizeCategory(mainCh.groupTitle)}",${displayName}\n`,
