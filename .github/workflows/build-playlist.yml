@@ -9,8 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    outputs:
+      should_deploy: ${{ steps.check.outputs.skip == 'false' && 'true' || 'false' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,22 +45,21 @@ jobs:
         if: steps.check.outputs.skip != 'true'
         run: node scripts/build-m3u.js
 
-      - name: Commit and push if changed
+      - name: Generate report
         if: steps.check.outputs.skip != 'true'
         run: |
-          git config user.name "juzkev"
-          git config user.email "juzkev@gmail.com"
-          git add playlist.m3u portal-status.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S')"
-            git push
-          fi
+          echo "Playlist generated successfully"
+          echo "File size: $(du -h playlist.m3u | cut -f1)"
+          echo "Channels: $(grep -c '#EXTINF' playlist.m3u)"
 
   pages:
     needs: build
-    if: always() && needs.build.result == 'success'
+    if: needs.build.outputs.should_deploy == 'true'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -81,5 +80,5 @@ jobs:
       - name: Report status
         run: |
           echo "Build: ${{ needs.build.result }}"
-          echo "Pages: ${{ needs.pages.result }}"
+          echo "Deploy: ${{ needs.pages.result }}"
           echo "Playlist: https://juzkev.github.io/anbox-iptv/playlist.m3u"
