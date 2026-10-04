@@ -1,11 +1,11 @@
 #EXTM3U
-#Generated: 2026-10-04T13:14:39.686Z
+#Generated: 2026-10-04T13:15:07.553Z
 #Anime Channels (Fresh Tokens)
 
 #EXTINF:-1 tvg-name="Animax HD",Animax HD
 http://tv123.cc.cd/live.php?ch=1030&sid=c41173e79f1de756986434cafd22bf86&exp=1791162839&sig=edb579e6633d0a6e53585ceac10f33a05324945596009d19e2d3ec7dcb962588
 
-#EXTINF:-1 tvg-name="dinofox, dinomultiservice, dino3, dino4, skunky3, skunky4, skunkytv, dsmax, godofiptv]" group-title="Kids",ID - ANIMAX",dinofox, dinomultiservice, dino3, dino4, skunky3, skunky4, skunkytv, dsmax, godofiptv]" group-title="Kids",ID - ANIMAX
+#EXTINF:-1 tvg-name="" group-title="Kids",ID - ANIMAX"," group-title="Kids",ID - ANIMAX
 http://sbhgoldpro.org/play/live.php?mac=00:1A:79:70:88:83&stream=704484&extension=ts&play_token=9vTKznZvqN
 http://dinofox.sbs/play/live.php?mac=00:1A:79:00:23:D6&stream=704484&extension=ts&play_token=9vTKznZvqN
 http://dinomultiservice.online/play/live.php?mac=00:1A:79:b3:e7:5e&stream=704484&extension=ts&play_token=9vTKznZvqN
@@ -17,67 +17,67 @@ http://skunkytv.live/play/live.php?mac=00:1A:79:26:60:78&stream=704484&extension
 http://dsmax.xyz/play/live.php?mac=00:1A:79:7b:4f:9e&stream=704484&extension=ts&play_token=9vTKznZvqN
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=704484&extension=ts&play_token=9vTKznZvqN
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME info ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916793&extension=ts&play_token=ifStjMQPiT
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916793&extension=ts&play_token=ifStjMQPiT
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916793&extension=ts&play_token=ifStjMQPiT
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 1 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916792&extension=ts&play_token=IsFPO0kQXz
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916792&extension=ts&play_token=IsFPO0kQXz
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916792&extension=ts&play_token=IsFPO0kQXz
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 2 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916791&extension=ts&play_token=vnl5pfAcaj
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916791&extension=ts&play_token=vnl5pfAcaj
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916791&extension=ts&play_token=vnl5pfAcaj
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 3 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916790&extension=ts&play_token=mtpilnOklF
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916790&extension=ts&play_token=mtpilnOklF
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916790&extension=ts&play_token=mtpilnOklF
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 4 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916789&extension=ts&play_token=62hsnK5NbL
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916789&extension=ts&play_token=62hsnK5NbL
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916789&extension=ts&play_token=62hsnK5NbL
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 5 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916788&extension=ts&play_token=27qqmJH7yN
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916788&extension=ts&play_token=27qqmJH7yN
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916788&extension=ts&play_token=27qqmJH7yN
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 6 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916787&extension=ts&play_token=op4B33iz6D
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916787&extension=ts&play_token=op4B33iz6D
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916787&extension=ts&play_token=op4B33iz6D
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 7 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916786&extension=ts&play_token=elIFKJmGUf
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916786&extension=ts&play_token=elIFKJmGUf
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916786&extension=ts&play_token=elIFKJmGUf
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 8 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916785&extension=ts&play_token=TqJNVIIKhl
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916785&extension=ts&play_token=TqJNVIIKhl
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916785&extension=ts&play_token=TqJNVIIKhl
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 9 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916784&extension=ts&play_token=vfjbUTYB0U
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916784&extension=ts&play_token=vfjbUTYB0U
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916784&extension=ts&play_token=vfjbUTYB0U
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 10 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916783&extension=ts&play_token=ur0CkF01WH
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916783&extension=ts&play_token=ur0CkF01WH
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916783&extension=ts&play_token=ur0CkF01WH
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 11 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916782&extension=ts&play_token=gVKeykekq6
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916782&extension=ts&play_token=gVKeykekq6
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916782&extension=ts&play_token=gVKeykekq6
 
-#EXTINF:-1 tvg-name="iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ",iptvgoat, godofiptv]" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ
+#EXTINF:-1 tvg-name="" group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ"," group-title="Sports",EN| ONEPLAY ANIME 12 ᴴᴰ
 http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916781&extension=ts&play_token=ry4DeoCPCa
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916781&extension=ts&play_token=ry4DeoCPCa
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916781&extension=ts&play_token=ry4DeoCPCa
