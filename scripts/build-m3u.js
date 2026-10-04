@@ -142,8 +142,8 @@ function normalizeChannelName(name) {
 // Check if a channel is Singapore/Malaysia related (for sorting)
 function isSGChannel(name, groupTitle) {
   const combined = (name + ' ' + groupTitle).toUpperCase();
-  // Exclude UK, VN, HK, PH channels
-  if (/^(UK\s*-|VN\s*-|HK\s*-|PH\s*-)/.test(name)) return false;
+  // Exclude UK, VN, HK, PH channels (including UK| prefix)
+  if (/^(UK\s*-|VN\s*-|HK\s*-|PH\s*-|UK\s*\|)/.test(name)) return false;
 
   // Match the original script's approach: check group-title and name
   return /\bSG\s+ENTERTAINMENT\b/.test(combined) ||
