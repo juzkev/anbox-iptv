@@ -5,7 +5,7 @@
 #EXTINF:-1 tvg-id="stream-fbcc49b7-75a6-456c-a7bf-6b6300597e50" tvg-name="Animax HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/532_1920x1080_HTV.png" group-title="🤠國際體育",Animax HD
 http://tv123.cc.cd/live.php?ch=1030&sid=d01fd165d48dff7e44d9a40ebb5b225c&exp=1791144287&sig=8439655cb410b7e9bd8a9a11a2f6e6930e76795230acbfde451df2d6b0d09fb5
 
-#EXTINF:-1 tvg-id="122933" tvg-name="KIDS| CARTOON NETWORK (CA) [greatott]" group-title="Other",KIDS| CARTOON NETWORK (CA) [greatott]
+#EXTINF:-1 tvg-id="122933" tvg-name="KIDS| CARTOON NETWORK (CA) ", group-title="Other",KIDS| CARTOON NETWORK (CA) [greatott]
 http://mag.greatott.me/play/live.php?mac=00:1A:79:D0:99:A1&stream=122933&extension=ts&play_token=BHwKQAkSWn7
 
 #EXTINF:-1 tvg-id="122935" tvg-name="KIDS| CARTOON NETWORK (DK) [greatott]" group-title="Other",KIDS| CARTOON NETWORK (DK) [greatott]
