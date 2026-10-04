@@ -5,6 +5,9 @@
 #EXTINF:-1 tvg-name="Animax HD",Animax HD
 http://tv123.cc.cd/live.php?ch=1030&sid=fcad6fbf8d5e0b4fafa69577e2cf909a&exp=1791162055&sig=85ad66c65cb8711028dff97a9560f3479c9dbb73d67f8f17b4ba3421293f0f16
 
+#EXTINF:-1 tvg-name="PH|ANIMAX",PH|ANIMAX (Fallback)
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=2033833&extension=ts&play_token=5E2pwsUtUB
+
 #EXTINF:-1 tvg-name="ID - ANIMAX",ID - ANIMAX
 http://sbhgoldpro.org/play/live.php?mac=00:1A:79:D0:80:82&stream=704484&extension=ts&play_token=BLZqq1aR6o
 http://sbhgoldpro.org/play/live.php?mac=00:1A:79:00:1F:6F&stream=704484&extension=ts&play_token=BLZqq1aR6o
