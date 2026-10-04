@@ -1,72 +1,72 @@
 #EXTM3U
-#Generated: 2026-10-04T13:44:00.138Z
+#Generated: 2026-10-04T13:45:16.177Z
 #Anime Channels
 
 #EXTINF:-1 tvg-name="Animax HD",Animax HD
-http://tv123.cc.cd/live.php?ch=1030&sid=f3d88dc41e8dbb4b6c276c3b60c6fadb&exp=1791164636&sig=4edf1df724b2d0fe16e9d415d578e015fb7c1793b20d46b982abd42012288bc3
+http://tv123.cc.cd/live.php?ch=1030&sid=338c105ad75e36f191382fc2279c7fb5&exp=1791164711&sig=3c4e48fc043fdf5142551c9663f70064cf2a9cb14311e9d24d8a1cc37331f532
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916793&extension=ts&play_token=V22tBm0we4
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916793&extension=ts&play_token=V22tBm0we4
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916793&extension=ts&play_token=V22tBm0we4
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME info ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME info ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916793&extension=ts&play_token=NXsfuauZBW
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916793&extension=ts&play_token=NXsfuauZBW
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916793&extension=ts&play_token=NXsfuauZBW
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916792&extension=ts&play_token=3s8VQCNBCT
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916792&extension=ts&play_token=3s8VQCNBCT
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916792&extension=ts&play_token=3s8VQCNBCT
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 1 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 1 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916792&extension=ts&play_token=NpLDPvVPve
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916792&extension=ts&play_token=NpLDPvVPve
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916792&extension=ts&play_token=NpLDPvVPve
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916791&extension=ts&play_token=xpMAGJgKJm
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916791&extension=ts&play_token=xpMAGJgKJm
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916791&extension=ts&play_token=xpMAGJgKJm
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 2 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 2 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916791&extension=ts&play_token=JLTWmLyjna
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916791&extension=ts&play_token=JLTWmLyjna
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916791&extension=ts&play_token=JLTWmLyjna
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916790&extension=ts&play_token=RPW8X8qb8c
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916790&extension=ts&play_token=RPW8X8qb8c
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916790&extension=ts&play_token=RPW8X8qb8c
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 3 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 3 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916790&extension=ts&play_token=e0zdCSFku1
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916790&extension=ts&play_token=e0zdCSFku1
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916790&extension=ts&play_token=e0zdCSFku1
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916789&extension=ts&play_token=c8CayX4MAm
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916789&extension=ts&play_token=c8CayX4MAm
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916789&extension=ts&play_token=c8CayX4MAm
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 4 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 4 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916789&extension=ts&play_token=OJ802eDvcP
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916789&extension=ts&play_token=OJ802eDvcP
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916789&extension=ts&play_token=OJ802eDvcP
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916788&extension=ts&play_token=yABgfC86mf
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916788&extension=ts&play_token=yABgfC86mf
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916788&extension=ts&play_token=yABgfC86mf
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 5 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 5 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916788&extension=ts&play_token=kLs1BjFG7V
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916788&extension=ts&play_token=kLs1BjFG7V
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916788&extension=ts&play_token=kLs1BjFG7V
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916787&extension=ts&play_token=vVUMgCTm4v
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916787&extension=ts&play_token=vVUMgCTm4v
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916787&extension=ts&play_token=vVUMgCTm4v
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 6 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 6 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916787&extension=ts&play_token=ujtv4xPiEX
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916787&extension=ts&play_token=ujtv4xPiEX
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916787&extension=ts&play_token=ujtv4xPiEX
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916786&extension=ts&play_token=WuVBF6p9aL
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916786&extension=ts&play_token=WuVBF6p9aL
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916786&extension=ts&play_token=WuVBF6p9aL
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 7 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 7 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916786&extension=ts&play_token=5jsNc0AMjL
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916786&extension=ts&play_token=5jsNc0AMjL
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916786&extension=ts&play_token=5jsNc0AMjL
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916785&extension=ts&play_token=5ocY2pJMp0
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916785&extension=ts&play_token=5ocY2pJMp0
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916785&extension=ts&play_token=5ocY2pJMp0
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 8 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 8 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916785&extension=ts&play_token=pni2mqxhy4
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916785&extension=ts&play_token=pni2mqxhy4
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916785&extension=ts&play_token=pni2mqxhy4
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916784&extension=ts&play_token=au86pvDEZm
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916784&extension=ts&play_token=au86pvDEZm
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916784&extension=ts&play_token=au86pvDEZm
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 9 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 9 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916784&extension=ts&play_token=clLK8c0qXw
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916784&extension=ts&play_token=clLK8c0qXw
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916784&extension=ts&play_token=clLK8c0qXw
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916783&extension=ts&play_token=1vgd0QfGdQ
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916783&extension=ts&play_token=1vgd0QfGdQ
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916783&extension=ts&play_token=1vgd0QfGdQ
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 10 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 10 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916783&extension=ts&play_token=euCdcENwkK
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916783&extension=ts&play_token=euCdcENwkK
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916783&extension=ts&play_token=euCdcENwkK
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916782&extension=ts&play_token=3eNMFPOPMC
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916782&extension=ts&play_token=3eNMFPOPMC
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916782&extension=ts&play_token=3eNMFPOPMC
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 11 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 11 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916782&extension=ts&play_token=yDUENNcHkw
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916782&extension=ts&play_token=yDUENNcHkw
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916782&extension=ts&play_token=yDUENNcHkw
 
-#EXTINF:-1 tvg-name="godofiptv]",godofiptv]
-http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916781&extension=ts&play_token=NlkmwDJAYU
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916781&extension=ts&play_token=NlkmwDJAYU
-http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916781&extension=ts&play_token=NlkmwDJAYU
+#EXTINF:-1 tvg-name="EN| ONEPLAY ANIME 12 ᴴᴰ [trxx, iptvgoat, godofiptv",EN| ONEPLAY ANIME 12 ᴴᴰ [trxx, iptvgoat, godofiptv
+http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1916781&extension=ts&play_token=ByhpAzzttb
+http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1916781&extension=ts&play_token=ByhpAzzttb
+http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1916781&extension=ts&play_token=ByhpAzzttb
 

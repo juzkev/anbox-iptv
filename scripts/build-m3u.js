@@ -871,9 +871,14 @@ function buildAnimePlaylist(m3u) {
         continue;
       }
 
-      // Extract clean name - take part after last comma
-      let cleanName = name.split(',').pop().trim();
-      cleanName = cleanName.replace(/[.*?]/g, '').trim();
+      // Extract clean name - use regex to get actual channel name
+      let cleanName = name;
+      const nameMatch = cleanName.match(/(EN\| ONEPLAY ANIME[^\]]+)/);
+      if (nameMatch) {
+        cleanName = nameMatch[1].replace(/\s+/g, ' ');
+      } else {
+        cleanName = cleanName.replace(/\[[^]]+\]/g, '').trim();
+      }
 
       if (url.includes('tv123.cc.cd')) {
         if (cleanName === 'Animax HD') {
