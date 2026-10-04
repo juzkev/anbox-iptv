@@ -1,11 +1,11 @@
 #EXTM3U
-#Generated: 2026-10-04T13:01:36.892Z
+#Generated: 2026-10-04T13:02:11.820Z
 #Anime Channels (Fresh Tokens)
 
-#EXTINF:-1 tvg-id="stream-fbcc49b7-75a6-456c-a7bf-6b6300597e50" tvg-name="Animax HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/532_1920x1080_HTV.png" group-title="🤠國際體育",Animax HD
+#EXTINF:-1 tvg-name="Animax HD",Animax HD
 http://tv123.cc.cd/live.php?ch=1030&sid=fcad6fbf8d5e0b4fafa69577e2cf909a&exp=1791162055&sig=85ad66c65cb8711028dff97a9560f3479c9dbb73d67f8f17b4ba3421293f0f16
 
-#EXTINF:-1 tvg-name="sbhgoldpro3, sbhgoldpro5, debit, dinofox, dinofox2, dino3, dino4, dino5, skunky3, skunky4, skunkytv]" group-title="Kids",ID - ANIMAX",sbhgoldpro3, sbhgoldpro5, debit, dinofox, dinofox2, dino3, dino4, dino5, skunky3, skunky4, skunkytv]" group-title="Kids",ID - ANIMAX
+#EXTINF:-1 tvg-name="ID - ANIMAX",ID - ANIMAX
 http://sbhgoldpro.org/play/live.php?mac=00:1A:79:D0:80:82&stream=704484&extension=ts&play_token=BLZqq1aR6o
 http://sbhgoldpro.org/play/live.php?mac=00:1A:79:00:1F:6F&stream=704484&extension=ts&play_token=BLZqq1aR6o
 http://sbhgoldpro.org/play/live.php?mac=00:1A:79:70:88:83&stream=704484&extension=ts&play_token=BLZqq1aR6o
