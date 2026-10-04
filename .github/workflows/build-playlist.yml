@@ -2,8 +2,8 @@ name: Build IPTV Playlist
 
 on:
   schedule:
-    # Every 2 hours - playlists don't change frequently
-    - cron: '0 */2 * * *'
+    # Every 30 minutes
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -55,37 +55,6 @@ jobs:
           git remote set-url origin https://x-access-token:$GH_PAT@github.com/juzkev/anbox-iptv.git
           git add playlist.m3u
           if ! git diff --cached --quiet; then
-            git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S')"
+            git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
             git push
           fi
-
-  pages:
-    needs: build
-    if: needs.build.outputs.should_deploy == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  report:
-    needs: [build, pages]
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
-      - name: Report status
-        run: |
-          echo "Build: ${{ needs.build.result }}"
-          echo "Deploy: ${{ needs.pages.result }}"
-          echo "Playlist: https://juzkev.github.io/anbox-iptv/playlist.m3u"
