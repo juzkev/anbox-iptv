@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPTV Playlist Explorer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 24px; margin-bottom: 20px; color: #fff; }
+    
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    input, select {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    input:focus, select:focus { outline: none; border-color: #0066cc; }
+    #search { flex: 1; min-width: 200px; }
+    #categoryFilter { min-width: 150px; }
+    
+    /* Stats */
+    .stats {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .stat-box {
+      background: #1e1e1e;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+    .stat-box .label { font-size: 12px; color: #888; }
+    .stat-box .value { font-size: 20px; font-weight: bold; color: #fff; }
+    
+    /* Table */
+    .channel-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1a1a1a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .channel-table th {
+      background: #252525;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      color: #aaa;
+      font-size: 13px;
+      position: sticky;
+      top: 0;
+    }
+    .channel-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #2a2a2a;
+      font-size: 14px;
+    }
+    .channel-table tr:hover { background: #252525; }
+    .channel-table input[type="checkbox"] { cursor: pointer; }
+    .category-badge {
+      display: inline-block;
+      background: #2a2a2a;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      color: #888;
+    }
+    
+    /* Actions */
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      background: #0066cc;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    button:hover { background: #0052a3; }
+    button.secondary { background: #333; }
+    button.secondary:hover { background: #444; }
+    button.danger { background: #cc3300; }
+    button.danger:hover { background: #a32a00; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    
+    /* Load more */
+    .load-more {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Progress */
+    .progress {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #333;
+      border-radius: 2px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #0066cc;
+      transition: width 0.3s;
+    }
+    
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      display: none;
+      z-index: 1000;
+    }
+    .toast.show { display: block; }
+    
+    /* Scroll container */
+    .table-container {
+      max-height: 70vh;
+      overflow-y: auto;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📺 IPTV Playlist Explorer</h1>
+    
+    <div id="loadSection">
+      <div class="progress">
+        <p>Load playlist from GitHub Pages...</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="loadProgress" style="width: 0%"></div>
+        </div>
+      </div>
+      <button onclick="loadPlaylist()">Load Playlist</button>
+    </div>
+
+    <div id="explorer" style="display: none;">
+      <div class="stats">
+        <div class="stat-box">
+          <div class="label">Total Channels</div>
+          <div class="value" id="totalCount">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="label">Filtered</div>
+          <div class="value" id="filterCount">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="label">Selected</div>
+          <div class="value" id="selectedCount">0</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <input type="text" id="search" placeholder="Search channels..." oninput="filterChannels()">
+        <select id="categoryFilter" onchange="filterChannels()">
+          <option value="">All Categories</option>
+        </select>
+        <select id="sortOrder" onchange="filterChannels()">
+          <option value="name">Sort by Name</option>
+          <option value="category">Sort by Category</option>
+        </select>
+        <button class="secondary" onclick="selectAll()">Select All</button>
+        <button class="secondary" onclick="deselectAll()">Deselect All</button>
+      </div>
+
+      <div class="table-container">
+        <table class="channel-table">
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="selectAllCheckbox" onchange="toggleAll(this)"></th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="channelList"></tbody>
+        </table>
+      </div>
+
+      <div class="load-more">
+        <button id="loadMoreBtn" onclick="loadMore()" style="display: none;">Load More</button>
+      </div>
+
+      <div class="actions">
+        <button onclick="exportM3U()">Export M3U</button>
+        <button class="secondary" onclick="exportList()">Export Text List</button>
+        <button class="danger" onclick="clearSelection()">Clear Selection</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // State
+    let allChannels = [];
+    let filteredChannels = [];
+    let selectedChannels = new Set();
+    let displayedCount = 0;
+    const PAGE_SIZE = 100;
+
+    // Load playlist
+    async function loadPlaylist() {
+      const progress = document.getElementById('loadProgress');
+      const btn = document.querySelector('#loadSection button');
+      btn.disabled = true;
+      progress.style.width = '10%';
+
+      try {
+        // Fetch playlist
+        const response = await fetch('https://juzkev.github.io/anbox-iptv/playlist.m3u');
+        progress.style.width = '30%';
+
+        const text = await response.text();
+        progress.style.width = '50%';
+
+        // Parse M3U
+        allChannels = parseM3U(text);
+        progress.style.width = '70%';
+
+        // Extract categories
+        populateCategories();
+        progress.style.width = '90%';
+
+        // Initial render
+        filterChannels();
+        progress.style.width = '100%';
+
+        document.getElementById('loadSection').style.display = 'none';
+        document.getElementById('explorer').style.display = 'block';
+        updateStats();
+
+      } catch (e) {
+        showToast('Error loading playlist: ' + e.message);
+        btn.disabled = false;
+      }
+    }
+
+    function parseM3U(text) {
+      const lines = text.split('\n');
+      const channels = [];
+      let current = null;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (line.startsWith('#EXTINF:')) {
+          current = { header: line, url: '', name: '', category: '', source: '' };
+        } else if (line && !line.startsWith('#') && current) {
+          current.url = line;
+          // Parse name from header
+          const match = current.header.match(/,(.+?)$/);
+          if (match) current.name = match[1].trim();
+          // Parse category
+          const catMatch = current.header.match(/group-title="([^"]+)"/);
+          if (catMatch) current.category = catMatch[1];
+          // Detect source
+          if (current.url.includes('anbox-iptv.kkhk.workers.dev')) {
+            current.source = 'Portal';
+          } else if (current.url.includes('tv123')) {
+            current.source = 'TV123';
+          } else {
+            current.source = 'External';
+          }
+          channels.push(current);
+          current = null;
+        }
+      }
+      return channels;
+    }
+
+    function populateCategories() {
+      const select = document.getElementById('categoryFilter');
+      const categories = [...new Set(allChannels.map(c => c.category))].sort();
+      categories.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat;
+        opt.textContent = `${cat} (${categories.length > 0 ? allChannels.filter(c => c.category === cat).length : ''})`;
+        select.appendChild(opt);
+      });
+    }
+
+    function filterChannels() {
+      const search = document.getElementById('search').value.toLowerCase();
+      const category = document.getElementById('categoryFilter').value;
+      const sort = document.getElementById('sortOrder').value;
+
+      filteredChannels = allChannels.filter(ch => {
+        const matchSearch = !search || ch.name.toLowerCase().includes(search) || ch.category.toLowerCase().includes(search);
+        const matchCategory = !category || ch.category === category;
+        return matchSearch && matchCategory;
+      });
+
+      if (sort === 'name') {
+        filteredChannels.sort((a, b) => a.name.localeCompare(b.name));
+      } else {
+        filteredChannels.sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name));
+      }
+
+      displayedCount = 0;
+      document.getElementById('channelList').innerHTML = '';
+      loadMore();
+      updateStats();
+    }
+
+    function loadMore() {
+      const tbody = document.getElementById('channelList');
+      const end = Math.min(displayedCount + PAGE_SIZE, filteredChannels.length);
+
+      for (let i = displayedCount; i < end; i++) {
+        const ch = filteredChannels[i];
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><input type="checkbox" onchange="toggleSelect(${i})" ${selectedChannels.has(i) ? 'checked' : ''}></td>
+          <td>${escapeHtml(ch.name)}</td>
+          <td><span class="category-badge">${escapeHtml(ch.category)}</span></td>
+          <td style="color: #666; font-size: 12px;">${ch.source}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+
+      displayedCount = end;
+      document.getElementById('loadMoreBtn').style.display = 
+        displayedCount < filteredChannels.length ? 'inline-block' : 'none';
+    }
+
+    function toggleSelect(index) {
+      if (selectedChannels.has(index)) {
+        selectedChannels.delete(index);
+      } else {
+        selectedChannels.add(index);
+      }
+      updateStats();
+    }
+
+    function toggleAll(checkbox) {
+      if (checkbox.checked) {
+        filteredChannels.forEach((_, i) => selectedChannels.add(i));
+      } else {
+        selectedChannels.clear();
+      }
+      loadMore();
+      updateStats();
+    }
+
+    function selectAll() {
+      filteredChannels.forEach((_, i) => selectedChannels.add(i));
+      loadMore();
+      updateStats();
+    }
+
+    function deselectAll() {
+      selectedChannels.clear();
+      loadMore();
+      updateStats();
+    }
+
+    function clearSelection() {
+      selectedChannels.clear();
+      loadMore();
+      updateStats();
+    }
+
+    function updateStats() {
+      document.getElementById('totalCount').textContent = allChannels.length.toLocaleString();
+      document.getElementById('filterCount').textContent = filteredChannels.length.toLocaleString();
+      document.getElementById('selectedCount').textContent = selectedChannels.size.toLocaleString();
+    }
+
+    function exportM3U() {
+      const header = '#EXTM3U\n#Generated: ' + new Date().toISOString() + '\n\n';
+      const lines = Array.from(selectedChannels).sort((a, b) => a - b).map(i => {
+        return filteredChannels[i].header + '\n' + filteredChannels[i].url;
+      }).join('\n');
+      download(header + lines, 'playlist-export.m3u', 'audio/x-mpegurl');
+      showToast(`Exported ${selectedChannels.size} channels`);
+    }
+
+    function exportList() {
+      const lines = Array.from(selectedChannels).sort((a, b) => a - b).map(i => {
+        return filteredChannels[i].name + ' - ' + filteredChannels[i].category;
+      }).join('\n');
+      download(lines, 'channels-export.txt', 'text/plain');
+      showToast(`Exported ${selectedChannels.size} channel names`);
+    }
+
+    function download(content, filename, type) {
+      const blob = new Blob([content], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+  </script>
+</body>
+</html>
