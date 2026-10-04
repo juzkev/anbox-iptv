@@ -101,8 +101,6 @@ http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920454&extension=ts&p
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920454&extension=ts&play_token=kvvMJgsO5b��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920454&extension=ts&play_token=kvvMJgsO5b��
 
-#EXTINF:-1 tvg-id="1920453" tvg-name="PRIME| ANIME X HIDIVE ᴿᴬᵂ [trxx,iptvgoat, godofiptv]",PRIME| ANIME X HIDIVE ᴿᴬᵂ
-http://trxx.in/play/live.php?mac=00:1A:79:00:00:5A&stream=1920453&extension=ts&play_token=eiA9A5MDch��
 http://line.iptvgoat.com/play/live.php?mac=00:1A:79:24:7A:C0&stream=1920453&extension=ts&play_token=eiA9A5MDch��
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=1920453&extension=ts&play_token=eiA9A5MDch��
 
@@ -351,4 +349,3 @@ http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=2033849&ext
 
 #EXTINF:-1 tvg-id="2033833" tvg-name="PH|ANIMAX" group-title="Regional",PH|ANIMAX 
 http://line.godofiptv.com/play/live.php?mac=A0:BB:3E:02:F1:78&stream=2033833&extension=ts&play_token=5E2pwsUtUB
-
