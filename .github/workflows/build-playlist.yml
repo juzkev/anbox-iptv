@@ -9,8 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      should_deploy: ${{ steps.check.outputs.skip == 'false' && 'true' || 'false' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,16 +43,18 @@ jobs:
         if: steps.check.outputs.skip != 'true'
         run: node scripts/build-m3u.js
 
-      - name: Generate report
+      - name: Commit and push playlist
         if: steps.check.outputs.skip != 'true'
         run: |
-          echo "Playlist generated successfully"
-          echo "File size: $(du -h playlist.m3u | cut -f1)"
-          echo "Channels: $(grep -c '#EXTINF' playlist.m3u)"
+          git config user.name "juzkev"
+          git config user.email "juzkev@gmail.com"
+          git add playlist.m3u
+          git diff --cached --quiet || git commit -m "Update playlist $(date -u '+%Y-%m-%d %H:%M:%S')"
+          git push
 
   pages:
     needs: build
-    if: needs.build.outputs.should_deploy == 'true'
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
