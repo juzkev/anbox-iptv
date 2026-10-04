@@ -2,6 +2,8 @@
 #Generated: 2026-10-04T07:50:21.817Z
 #Anime Channels (Expanded - One URL Per Portal)
 
+#EXTINF:-1 tvg-id="stream-fbcc49b7-75a6-456c-a7bf-6b6300597e50" tvg-name="Animax HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/532_1920x1080_HTV.png" group-title="🤠國際體育",Animax HD
+http://tv123.cc.cd/live.php?ch=1030&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=b59a5da373dc87bcc159b0ca4751874c1b2913d99c6f8d91b4802a7476127664
 #EXTINF:-1 tvg-id="stream-fe278051-83fd-43bd-ad36-f8e2b90422aa" tvg-name="Anime 24/7 (ROKU)" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/OM659334/3760597490189526-7_SC_logo_color.jpg" group-title="日本 | Japan",Anime 24/7 (ROKU)
 http://tv123.cc.cd/live.php?ch=898&sid=39daee60950dbd7afe4ddef23c914881&exp=1791137294&sig=272d010c0c7c5d7ad3f07746b88f85353cfba237dde124947ddf1d18d7c55173
 #EXTINF:-1 tvg-id="stream-d8c46a1e-6471-443b-bd36-0f9cb4292d65" tvg-name="Anime Visión (Spain)" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/ES300029LP_20250326T013525SQUARE.png" group-title="日本 | Japan",Anime Visión (Spain)
