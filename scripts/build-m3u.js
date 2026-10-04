@@ -46,7 +46,7 @@ const DEFAULT_MARKERS = [
 const customDomain = "https://anbox-iptv.kkhk.workers.dev";
 
 // Retry logic with exponential backoff
-async function fetchUrlWithRetry(url, options = {}, retries = 3) {
+async function fetchUrlWithRetry(url, options = {}, retries = 1) {
   for (let i = 0; i < retries; i++) {
     try {
       return await fetchUrl(url, options);
@@ -122,7 +122,7 @@ async function probePortal(url) {
         'Cookie': `mac=${mac}`,
         'User-Agent': 'Mozilla/5.0 (QtEmbedded; U; Linux; MAG200 stb)'
       },
-      timeout: 5000
+      timeout: 3000
     });
     return status === 200;
   } catch {
@@ -140,7 +140,7 @@ async function fetchChannelList(portalKey, url) {
         Cookie: `mac=${parsed.searchParams.get('mac')}`,
         'User-Agent': 'Mozilla/5.0 (QtEmbedded; U; Linux; MAG200 stb)'
       },
-      timeout: 15000
+      timeout: 8000
     });
 
     if (status !== 200) return [];
