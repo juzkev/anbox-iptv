@@ -11,3 +11,7 @@ id = "f734aec3a692476cad6c0b7eb03648cf"
 [[kv_namespaces]]
 binding = "portalist"
 id = "5f1bf8a016184ba099055578c063789b"
+
+[[workers.routes]]
+pattern = "anbox-iptv.kkhk.workers.dev/*"
+zone_name = "kkhk.workers.dev"
